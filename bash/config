@@ -1,0 +1,63 @@
+# Colors from http://wiki.archlinux.org/index.php/Color_Bash_Prompt
+NO_COLOR='\e[0m' #disable any colors
+# regular colors
+BLACK='\033[0;30m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+MAGENTA='\033[0;35m'
+CYAN='\033[0;36m'
+WHITE='\e[0;37m'
+# emphasized (bolded) colors
+EBLACK='\033[1;30m'
+ERED='\033[1;31m'
+EGREEN='\033[1;32m'
+EYELLOW='\033[1;33m'
+EBLUE='\033[1;34m'
+EMAGENTA='\033[1;35m'
+ECYAN='\033[1;36m'
+EWHITE='\033[1;37m'
+# underlined colors
+UBLACK='\033[4;30m'
+URED='\033[4;31m'
+UGREEN='\033[4;32m'
+UYELLOW='\033[4;33m'
+UBLUE='\033[4;34m'
+UMAGENTA='\033[4;35m'
+UCYAN='\033[4;36m'
+UWHITE='\033[4;37m'
+# background colors
+BBLACK='\033[40m'
+BRED='\033[41m'
+BGREEN='\033[42m'
+BYELLOW='\033[43m'
+BBLUE='\033[44m'
+BMAGENTA='\033[45m'
+BCYAN='\033[46m'
+BWHITE='\033[47m'
+
+#
+# Prompt Functions
+#
+function rvm_selected_ruby {
+	rb=$(~/.rvm/bin/rvm-prompt)
+	
+	if [ $rb ]
+		then
+			echo -ne "$ERED$rb"
+	fi	
+}
+
+function vcs_info {
+	vcs=$(vcprompt)
+	if [ $vcs ]
+		then
+			echo -ne " - $EYELLOW$vcs"
+	fi
+}
+
+#
+# Prompt
+#
+export PS1="\n\[$MAGENTA\]\u@\h\[$NO_COLOR\]:\[$ECYAN\]\w\[$NO_COLOR\] - \[$GREEN\]\t\[$NO_COLOR\]\$(vcs_info)\n\$(rvm_selected_ruby)\[$EWHITE\] → \[$NO_COLOR\]"

@@ -1,0 +1,2 @@
+# This file should be moved to ~/.bash_profile
+[[ -s ~/.bashrc ]] && source ~/.bashrc
