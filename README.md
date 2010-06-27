@@ -9,7 +9,7 @@ These are config files to configure a system how I like. I'm a Unix noob, so it'
     cp bashrc ~/.bashrc
 
 _Note:_ The bash prompt uses [vcprompt](http://vc.gerg.ca/hg/vcprompt) to display version control information for
-CVS, Git and Mercurial. This should be built and installed somewhere on the `$PATH`.
+CVS, Git and Mercurial. This should be built and installed somewhere on the `$PATH` (typically `~/bin`).
 
 ## Environment
 I am running on Mac OS X, currently 10.6, Snow Leopard, using bash as my shell.
