@@ -1,5 +1,5 @@
 # Kevin's Dot Files
-These are config files to configure a system awesomely.
+These are config files to configure a system how I like. I'm a Unix noob, so it's nothing special.
 
 ## Installation
 `git clone git@github.com:krohrbaugh/dotfiles.git ~/bin/dotfiles
