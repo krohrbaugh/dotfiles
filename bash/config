@@ -45,7 +45,7 @@ function rvm_selected_ruby {
 	
 	if [ $rb ]
 		then
-			echo -ne "$ERED$rb"
+			echo -ne "$rb"
 	fi	
 }
 
@@ -53,11 +53,11 @@ function vcs_info {
 	vcs=$(vcprompt)
 	if [ $vcs ]
 		then
-			echo -ne " - $EYELLOW$vcs"
+			echo -ne " $vcs"
 	fi
 }
 
 #
 # Prompt
 #
-export PS1="\n\[$MAGENTA\]\u@\h\[$NO_COLOR\]:\[$ECYAN\]\w\[$NO_COLOR\] - \[$GREEN\]\t\[$NO_COLOR\]\$(vcs_info)\n\$(rvm_selected_ruby)\[$EWHITE\] → \[$NO_COLOR\]"
+export PS1="\n\[$MAGENTA\]\u@\h\[$NO_COLOR\]:\[$ECYAN\]\w\[$NO_COLOR\] - \[$GREEN\]\t\[$EYELLOW\]\$(vcs_info)\n\[$ERED\]\$(rvm_selected_ruby)\[$EWHITE\] → \[$NO_COLOR\]"
