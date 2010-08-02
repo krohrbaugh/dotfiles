@@ -1,0 +1,2 @@
+alias ss="./script/server"
+alias reload="source ~/.bashrc"

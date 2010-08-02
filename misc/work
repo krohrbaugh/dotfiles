@@ -1,0 +1,4 @@
+#
+# Sets the machine up for use at work (behind firewall)
+#
+export HTTP_PROXY="http://naproxy.pg.com:8080"
