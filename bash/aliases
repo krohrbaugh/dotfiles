@@ -1,2 +1,4 @@
 alias ss="./script/server"
 alias reload="source ~/.bashrc"
+
+alias gs="git status"
