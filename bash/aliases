@@ -1,3 +1,15 @@
-alias ss="./script/server"
+#
+# Shell-related
+#
 alias reload="source ~/.bashrc"
+
+#
+# Development-related
+#
 alias gs="git status"
+alias ss="./script/server"
+
+# 
+# Network-related
+#
+alias flushdns="dscacheutil -flushcache"
