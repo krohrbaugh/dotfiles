@@ -8,6 +8,7 @@ alias reload="source ~/.bashrc"
 #
 alias gs="git status"
 alias ss="./script/server"
+alias sc="./script/console"
 
 # 
 # Network-related
