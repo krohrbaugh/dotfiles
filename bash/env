@@ -1,5 +1,6 @@
 export PATH="~/bin:$PATH"
 export EDITOR="mate -w"
+export GEM_EDITOR="mate -w"
 
 # LS Colors
 export CLICOLOR=1
