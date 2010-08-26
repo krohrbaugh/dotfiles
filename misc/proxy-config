@@ -14,7 +14,7 @@ proxy=$(egrep "$netloc[ \t]*=" ~/bin/dotfiles/misc/proxies | \
 no_proxy=$(egrep "$netloc[ \t]*=" ~/bin/dotfiles/misc/proxies | \
 		     sed 's/.*=[ \t]*\(.*\)[ \t]|[ \t]*\(.*\)/\2/')
 
-if [ -n "$http_proxy" ]; then
+if [ -n "$proxy" ]; then
   export proxy
   export http_proxy="http://$proxy"
   export HTTP_PROXY="$http_proxy"
