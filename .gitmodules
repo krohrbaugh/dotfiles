@@ -1,0 +1,18 @@
+[submodule "msanders-snipmate.vim"]
+	path = vim/bundle/msanders-snipmate.vim
+	url = http://github.com/msanders/snipmate.vim.git
+[submodule "tpope-vim-ragtag"]
+	path = vim/bundle/tpope-vim-ragtag
+	url = http://github.com/tpope/vim-ragtag.git
+[submodule "tpope-vim-rails"]
+	path = vim/bundle/tpope-vim-rails
+	url = http://github.com/tpope/vim-rails.git
+[submodule "tpope-vim-surround"]
+	path = vim/bundle/tpope-vim-surround
+	url = http://github.com/tpope/vim-surround.git
+[submodule "tsaleh-vim-tcomment"]
+	path = vim/bundle/tsaleh-vim-tcomment
+	url = http://github.com/tsaleh/vim-tcomment.git
+[submodule "vim-makegreen"]
+	path = vim/bundle/vim-makegreen
+	url = http://github.com/reinh/vim-makegreen.git
