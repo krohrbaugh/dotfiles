@@ -4,6 +4,11 @@
 alias reload="source ~/.bashrc"
 
 #
+# Utility
+#
+alias dotfiles="mate -w ~/bin/dotfiles"
+
+#
 # Development-related
 #
 alias gs="git status"
