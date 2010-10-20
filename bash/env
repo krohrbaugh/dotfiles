@@ -1,6 +1,7 @@
 export PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export EDITOR="mate -w"
 export GEM_EDITOR="mate -w"
+export DOT_FILES="$HOME/bin/dotfiles"
 
 # LS Colors
 export CLICOLOR=1
