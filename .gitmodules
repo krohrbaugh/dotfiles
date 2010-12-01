@@ -1,0 +1,3 @@
+[submodule "carlhuda-janus"]
+	path = vim
+	url = https://github.com/carlhuda/janus.git
