@@ -1,0 +1,11 @@
+" Local customizations overriding vim/gvimrc settings
+
+" Transparency (must have experimental renderer enabled within MacVim)
+set transparency=5
+
+" Default color scheme
+colorscheme neon
+
+" Fonts
+set guifont=Inconsolata:h16
+set antialias

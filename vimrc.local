@@ -1,0 +1,8 @@
+" Local customizations overriding vim/vimrc settings
+
+" Set color scheme
+colorscheme neon
+
+" Turn off scroll bars, they are ugly
+set guioptions-=L
+set guioptions-=r
