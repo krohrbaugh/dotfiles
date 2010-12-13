@@ -6,3 +6,6 @@ colorscheme neon
 " Turn off scroll bars, they are ugly
 set guioptions-=L
 set guioptions-=r
+
+" Clear search highlighting with <ESC>
+nnoremap <esc> :noh<return><esc>
