@@ -1,4 +1,4 @@
-export PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7.1/bin:$PATH"
 export EDITOR="mvim"
 export GEM_EDITOR="mvim"
 export DOT_FILES="$HOME/bin/dotfiles"
