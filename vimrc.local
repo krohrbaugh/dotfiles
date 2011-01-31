@@ -1,7 +1,7 @@
 " Local customizations overriding vim/vimrc settings
 
 " Append local runtime folder for non-Janus customization
-set runtimepath+=~/.vim.local
+set runtimepath+=~/.vim.local,~/.vim.local/after
 
 " Load local plugins
 runtime! plugin/*.vim
