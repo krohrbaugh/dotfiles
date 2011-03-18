@@ -6,6 +6,10 @@ set transparency=5
 " Default color scheme
 colorscheme neon
 
+" Code width visual guide
+hi ColorColumn guibg=#404040
+set colorcolumn=80
+
 " Fonts
 set guifont=Inconsolata:h16
 set antialias
