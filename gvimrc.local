@@ -7,7 +7,7 @@ set transparency=5
 colorscheme neon
 
 " Code width visual guide
-hi ColorColumn guibg=#404040
+highlight ColorColumn guibg=#404040
 set colorcolumn=80
 
 " Fonts
