@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # -*- ruby -*-
 
-libs = %w(looksee/shortcuts wirble)
+libs = %w(looksee wirble)
 
 if RUBY_VERSION < "1.9"
   libs.unshift 'rubygems'
