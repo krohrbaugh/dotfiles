@@ -15,6 +15,8 @@ alias gs="git status"
 alias ss="./script/server"
 alias sc="./script/console"
 
+alias bx="bundle exec $1"
+
 # 
 # Network-related
 #
