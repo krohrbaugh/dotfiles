@@ -17,7 +17,7 @@ alias sc="./script/console"
 
 alias bx="bundle exec $1"
 
-# 
+#
 # Network-related
 #
 alias flushdns="dscacheutil -flushcache"
