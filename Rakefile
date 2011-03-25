@@ -54,6 +54,8 @@ task :install do
   end
 end
 
+task :default => 'install'
+
 def replace_file(file)
   system %Q{rm -rf "$HOME/.#{file.sub('.erb', '')}"}
   link_file(file)
