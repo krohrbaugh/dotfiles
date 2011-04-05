@@ -9,6 +9,7 @@
 *~
 /nbproject/
 /*.tmpproj
+tmtags
 **.swp
 tags
 .rvmrc
