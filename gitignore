@@ -1,6 +1,14 @@
+# mac cruft
 .DS_Store
+
+# scm cruft
+**.orig
 .svn
+
+# ide/editor cruft
 *~
-.*.swp
+/nbproject/
+/*.tmpproj
+**.swp
 tags
 .rvmrc
