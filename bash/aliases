@@ -17,6 +17,8 @@ alias sc="./script/console"
 
 alias bx="bundle exec $1"
 
+alias powlog="cd ~/Library/Logs/Pow/apps && ls"
+
 #
 # Network-related
 #
