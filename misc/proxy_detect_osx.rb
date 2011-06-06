@@ -9,30 +9,6 @@ require 'yaml'
 class ProxySettings
   def initialize
     raw_settings = `scutil --proxy`
-    raw_settings = <<-EOF
-<dictionary> {
-  FTPEnable : 1
-  HTTPEnable : 1
-  HTTPPort : 8080
-  ExceptionsList : <array> {
-    0 : *.local
-    1 : 169.254/16
-    2 : *.pg.com
-    3 : *.dev
-    4 : localhost
-    5 : activate.adobe.com
-    6 : practivate.adobe.com
-    7 : 155.118.*
-  }
-  HTTPSPort : 8080
-  FTPPassive : 1
-  FTPProxy : naproxy.pg.com
-  HTTPProxy : naproxy.pg.com
-  FTPPort : 8080
-  HTTPSEnable : 1
-  HTTPSProxy : naproxy.pg.com
-}
-EOF
     raw_settings.gsub! /\s*\<\w+\>\s+\{|\s+\}/, ''
     @settings = YAML::load(raw_settings)
   end
