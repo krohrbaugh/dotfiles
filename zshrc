@@ -32,5 +32,4 @@ source $HOME/bin/dotfiles/zsh/aliases
 source $HOME/bin/dotfiles/zsh/functions
 
 # Detect proxy settings
-ruby $HOME/bin/dotfiles/misc/proxy-detect.rb
-source /tmp/proxy_config.sh
+source $DOT_FILES/misc/proxy-detect
