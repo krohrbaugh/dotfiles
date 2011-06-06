@@ -1,0 +1,23 @@
+#
+# Shell-related
+#
+alias reload="source ~/.zshrc"
+
+#
+# Utility
+#
+alias dotfiles="$EDITOR ~/bin/dotfiles"
+
+#
+# Development-related
+#
+alias gs="git status"
+
+alias bx="bundle exec $1"
+
+alias powlog="cd ~/Library/Logs/Pow/apps && ls"
+
+#
+# Network-related
+#
+alias flushdns="dscacheutil -flushcache"
