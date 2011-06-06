@@ -1,7 +1,9 @@
 #!/bin/sh
 
-proxy=$(ruby $DOT_FILES/misc/proxy_detect_osx.rb proxy)
-no_proxy=$(ruby $DOT_FILES/misc/proxy_detect_osx.rb no_proxy)
+detect_rb=$DOT_FILES/misc/proxy_detect_osx.rb
+
+proxy=$(ruby $detect_rb proxy)
+no_proxy=$(ruby $detect_rb no_proxy)
 
 if [ -n "$proxy" ]; then
   export proxy
