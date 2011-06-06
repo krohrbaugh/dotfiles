@@ -1,5 +1,8 @@
+# [KR] Path to dotfiles
+export DOT_FILES="$HOME/bin/dotfiles"
+
 # Path to your oh-my-zsh configuration.
-export ZSH=$HOME/bin/dotfiles/oh-my-zsh
+export ZSH=$DOT_FILES/oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -26,10 +29,10 @@ plugins=(git rails3 brew bundler gem osx pow ruby rvm)
 source $ZSH/oh-my-zsh.sh
 
 # krohrbaugh environment customizations
-source $HOME/bin/dotfiles/zsh/env
-source $HOME/bin/dotfiles/zsh/config
-source $HOME/bin/dotfiles/zsh/aliases
-source $HOME/bin/dotfiles/zsh/functions
+source $DOT_FILES/zsh/env
+source $DOT_FILES/zsh/config
+source $DOT_FILES/zsh/aliases
+source $DOT_FILES/zsh/functions
 
 # Detect proxy settings
 source $DOT_FILES/misc/proxy-detect

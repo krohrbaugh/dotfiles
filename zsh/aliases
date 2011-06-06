@@ -6,7 +6,8 @@ alias reload="source ~/.zshrc"
 #
 # Utility
 #
-alias dotfiles="$EDITOR ~/bin/dotfiles"
+alias df="cd $DOT_FILES"
+alias dotfiles="$EDITOR $DOT_FILES"
 
 #
 # Development-related
