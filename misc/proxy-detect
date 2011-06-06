@@ -18,3 +18,5 @@ else
   unset no_proxy
   unset NO_PROXY
 fi
+
+unset detect_rb
