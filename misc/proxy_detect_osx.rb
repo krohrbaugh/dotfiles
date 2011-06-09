@@ -48,13 +48,13 @@ end
 opt = ARGV[0].downcase
 settings = ProxySettings.new
 
-case opt
-when 'proxy'
-  msg = settings.http_proxy
-when 'no_proxy'
-  msg = settings.exceptions_list
+puts case opt
+when '--proxy'
+  settings.http_proxy
+when '--no_proxy'
+  settings.exceptions_list
+when '--all'
+  "#{settings.http_proxy}|#{settings.exceptions_list}"
 else
-  msg = 'unknown argument'
+  "unknown argument"
 end
-
-puts msg if RUBY_PLATFORM =~ /darwin/i

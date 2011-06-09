@@ -1,9 +1,10 @@
 #!/bin/sh
 
 detect_rb=$DOT_FILES/misc/proxy_detect_osx.rb
+detected=$(ruby $detect_rb --all)
 
-proxy=$(ruby $detect_rb proxy)
-no_proxy=$(ruby $detect_rb no_proxy)
+proxy=$(echo $detected | cut -d'|' -f1)
+no_proxy=$(echo $detected | cut -d'|' -f2)
 
 if [ -n "$proxy" ]; then
   export proxy
@@ -19,4 +20,5 @@ else
   unset NO_PROXY
 fi
 
+unset detected
 unset detect_rb
