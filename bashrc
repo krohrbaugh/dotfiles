@@ -5,4 +5,5 @@ source ~/bin/dotfiles/bash/config
 source ~/bin/dotfiles/bash/aliases
 source ~/bin/dotfiles/bash/functions
 
-source ~/bin/dotfiles/misc/proxy-config
+# Detect proxy settings
+source ~/bin/dotfiles/misc/proxy-detect
