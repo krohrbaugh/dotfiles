@@ -1,0 +1,2 @@
+Gemfile.lock merge=gemfilelock
+db/schema.rb merge=railsschema
