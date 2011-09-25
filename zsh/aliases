@@ -15,6 +15,7 @@ alias dotfiles="$EDITOR $DOT_FILES"
 alias gs="git status"
 
 alias bx="bundle exec $1"
+alias r="rails"
 
 alias powlog="cd ~/Library/Logs/Pow/apps && ls"
 
@@ -22,3 +23,8 @@ alias powlog="cd ~/Library/Logs/Pow/apps && ls"
 # Network-related
 #
 alias flushdns="dscacheutil -flushcache"
+
+#
+# PG-related
+#
+alias fixvpn="sudo ruby $DOT_FILES/misc/patch_juniper_pac.rb"

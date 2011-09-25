@@ -11,6 +11,8 @@ class ProxySettings
     raw_settings = `scutil --proxy`
     raw_settings.gsub! /\s*\<\w+\>\s+\{|\s+\}/, ''
     @settings = YAML::load(raw_settings)
+  rescue
+    @settings = {}
   end
 
   def http_proxy_set?
@@ -38,8 +40,12 @@ class ProxySettings
 
     def parse_exceptions_list
       exceptions = []
-      @settings['ExceptionsList'].each do |key, value|
-        exceptions << value.sub(/\*/, '')
+      exceptions_list = @settings['ExceptionsList']
+
+      if exceptions_list
+        exceptions_list.each do |key, value|
+          exceptions << value.sub(/\*/, '')
+        end
       end
       exceptions.join(',')
     end
