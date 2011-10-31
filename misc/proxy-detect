@@ -14,6 +14,7 @@ if [ -n "$proxy" ]; then
   export HTTPS_PROXY="$https_proxy"
   export no_proxy
   export NO_PROXY="$no_proxy"
+  export GIT_PROXY_COMMAND="$DOT_FILES/misc/git-proxy.rb"
 else
   unset proxy
   unset http_proxy
@@ -22,6 +23,7 @@ else
   unset HTTPS_PROXY
   unset no_proxy
   unset NO_PROXY
+  unset GIT_PROXY_COMMAND
 fi
 
 unset detected
