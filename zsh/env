@@ -1,6 +1,11 @@
-export PATH="~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7.1/bin:$PATH"
-export EDITOR="mvim"
-export GEM_EDITOR="mvim"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7.1/bin:$PATH"
+export EDITOR="subl -w"
+export GEM_EDITOR="subl -w"
+
+# Sublime Text 2
+export SUBLIME_DATA="$HOME/Library/Application Support/Sublime Text 2"
+export SUBLIME_PKG="$SUBLIME_DATA/Packages"
+export SUBLIME_USR="$SUBLIME_PKG/User"
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
