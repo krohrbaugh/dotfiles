@@ -1,9 +1,15 @@
 #
 # Source: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+#         https://github.com/paulirish/dotfiles/blob/master/.osx
 #
+
+echo "Setting sensible Mac OS X system preferences...\c"
 
 # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# Enable subpixel font rendering on non-Apple LCDs
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 # Enable the 2D Dock
 # defaults write com.apple.dock no-glass -bool true
@@ -13,6 +19,9 @@ defaults write com.apple.dock autohide -bool true
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
+
+# Enable iTunes track notifications in the Dock
+# defaults write com.apple.dock itunes-notifications -bool true
 
 # Disable menu bar transparency
 # defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
@@ -55,13 +64,13 @@ defaults write com.apple.dock show-process-indicators -bool true
 defaults write com.apple.dock launchanim -bool false
 
 # Disable press-and-hold for keys in favor of key repeat
-# defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-# defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 0
 
 # Disable auto-correct
-# defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Disable window animations
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
@@ -133,7 +142,7 @@ defaults write com.apple.Mail DisableReplyAnimations -bool true
 defaults write com.apple.Mail DisableSendAnimations -bool true
 
 # Disable Resume system-wide
-# defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
+defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
 # Enable Dashboard dev mode (allows keeping widgets on the desktop)
 defaults write com.apple.dashboard devmode -bool true
@@ -152,4 +161,6 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 #echo "0x08000100:0" > ~/.CFUserTextEncoding
 
 # Kill affected applications
-for app in Safari Finder Dock Mail; do killall "$app"; done
+for app in Safari Finder Dock Mail; do killall "$app" &> /dev/null; done
+
+echo "DONE!"

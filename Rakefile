@@ -54,6 +54,22 @@ task :install do
   end
 end
 
+desc "sets sensible Mac OS X system preferences"
+task :set_osx_defaults do
+  if RUBY_PLATFORM.downcase.include?('darwin')
+    cmd = "#{Dir.pwd}/osx/preferences"
+    print "\nCAUTION: About to execute '#{cmd}' as root. Proceed? [yn] "
+    case $stdin.gets.chomp.downcase
+    when 'y'
+      exec "sudo #{cmd}"
+    else
+      puts "\nAborted: User canceled."
+    end
+  else
+    puts "\nAborted: Cannot set OS X preferences when not running OS X!"
+  end
+end
+
 task :default => 'install'
 
 def replace_file(file)
