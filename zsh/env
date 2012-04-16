@@ -1,4 +1,4 @@
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/python/2.7.1/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$PATH"
 export EDITOR="subl -w"
 export GEM_EDITOR="subl -w"
 
