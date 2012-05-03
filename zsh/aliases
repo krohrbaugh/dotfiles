@@ -21,6 +21,9 @@ alias e="subl -n ."
 
 alias powlog="cd ~/Library/Logs/Pow/apps && ls"
 
+# Clear Xcode's DerivedData cache
+alias ded="rm -rf ~/Library/Developer/Xcode/DerivedData"
+
 #
 # Network-related
 #
