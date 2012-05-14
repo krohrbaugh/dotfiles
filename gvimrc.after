@@ -5,5 +5,8 @@ highlight ColorColumn guibg=#404040
 set colorcolumn=80
 
 " Fonts
-set guifont=Inconsolata:h16
+set guifont=Inconsolata:h18
 set antialias
+
+" Disable toolbar
+set guioptions-=T
