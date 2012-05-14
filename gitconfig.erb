@@ -34,7 +34,7 @@
 [core]
 	excludesfile = <%= ENV['HOME'] %>/.gitignore
   attributesfile = <%= ENV['HOME'] %>/bin/dotfiles/git/attributes
-	editor = subl -w
+	editor = 'mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
 [apply]
 	whitespace = nowarn
 [format]

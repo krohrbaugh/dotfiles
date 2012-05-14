@@ -1,6 +1,10 @@
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$PATH"
-export EDITOR="subl -w"
-export GEM_EDITOR="subl -w"
+
+# Editor settings
+#   Sublime: 'subl -w'
+#   MacVim:  'mvim'
+export EDITOR="mvim"
+export GEM_EDITOR="mvim"
 
 # Node
 export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"

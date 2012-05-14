@@ -17,7 +17,8 @@ alias gs="git status"
 alias bx="bundle exec $1"
 alias r="rails"
 
-alias e="subl -n ."
+# alias e="subl -n ."
+alias e="mvim ."
 
 alias powlog="cd ~/Library/Logs/Pow/apps && ls"
 
