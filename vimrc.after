@@ -4,7 +4,8 @@
 set runtimepath+=~/.vim.local,~/.vim.local/after
 
 " Set color scheme
-colorscheme neon
+"colorscheme neon
+colorscheme Tomorrow-Night-Eighties
 
 " Turn off scroll bars, they are ugly
 set guioptions-=L
