@@ -27,7 +27,7 @@ desc "install the dot files into user's home directory"
 task :install do
   replace_all = false
   Dir['*'].each do |file|
-    next if %w[Rakefile README.md LICENSE bash misc oh-my-zsh osx].include? file
+    next if %w[Rakefile README.md LICENSE bash misc oh-my-zsh osx zsh].include? file
 
     if File.exist?(File.join(ENV['HOME'], ".#{file.sub('.erb', '')}"))
       if File.identical? file, File.join(ENV['HOME'], ".#{file.sub('.erb', '')}")
@@ -51,6 +51,30 @@ task :install do
     else
       link_file(file)
     end
+  end
+end
+
+desc "copy oh-my-zsh customizations"
+task :copy_oh_my_zsh_customizations do
+  unless ENV.has_key?('ZSH')
+    puts "No ZSH environment variable set. Are you using Oh My ZSH?"
+    exit
+  end
+
+  target_path = File.join(ENV['ZSH'], 'custom')
+
+  # It'd be nice if we could link this, but Oh My Zsh gets all pissy
+  Dir['zsh/oh-my-zsh/*'].each do |file|
+    path, name = File.split(file)
+    target = File.join(target_path, name)
+
+    if File.exist?(target)
+      puts "deleting #{target}"
+      system %Q{rm -rf #{target}}
+    end
+
+    puts "copying #{name}"
+    system %Q{cp #{file} #{target}}
   end
 end
 
