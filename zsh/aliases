@@ -18,12 +18,15 @@ alias bx="bundle exec $1"
 alias r="rails"
 
 # alias e="subl -n ."
-alias e="mvim ."
+alias e="vim ."
 
 alias powlog="cd ~/Library/Logs/Pow/apps && ls"
 
 # Clear Xcode's DerivedData cache
 alias ded="rm -rf ~/Library/Developer/Xcode/DerivedData"
+
+# Reset TERM when using tmux
+alias tmux="TERM=screen-256color-bce tmux"
 
 #
 # Network-related

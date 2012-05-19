@@ -4,12 +4,7 @@
 set runtimepath+=~/.vim.local,~/.vim.local/after
 
 " Set color scheme
-"colorscheme neon
 colorscheme Tomorrow-Night-Eighties
-
-" Turn off scroll bars, they are ugly
-set guioptions-=L
-set guioptions-=r
 
 " Clear search highlighting with <ESC>
 nnoremap <esc> :noh<return><esc>
@@ -17,3 +12,12 @@ nnoremap <esc> :noh<return><esc>
 " Scrolloff for context-viewing bliss
 set scrolloff=5
 set sidescrolloff=5
+
+"
+" NERDTree Configuration
+"
+
+" Close NERDTree after opening a file
+let NERDTreeQuitOnOpen=1
+" Hide NERDTree on launch
+autocmd VimEnter * NERDTreeClose

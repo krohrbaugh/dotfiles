@@ -10,3 +10,5 @@ set antialias
 
 " Disable toolbar
 set guioptions-=T
+set guioptions-=L
+set guioptions-=r
