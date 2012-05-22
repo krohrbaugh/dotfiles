@@ -6,6 +6,10 @@ set runtimepath+=~/.vim.local,~/.vim.local/after
 " Set color scheme
 colorscheme Tomorrow-Night-Eighties
 
+" Column guide
+highlight ColorColumn guibg=#404040
+set colorcolumn=80
+
 " Clear search highlighting with <ESC>
 nnoremap <esc> :noh<return><esc>
 

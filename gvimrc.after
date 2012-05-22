@@ -1,9 +1,5 @@
 " Local customizations overriding vim/gvimrc settings
 
-" Code width visual guide
-highlight ColorColumn guibg=#404040
-set colorcolumn=80
-
 " Fonts
 set guifont=Inconsolata:h18
 set antialias
