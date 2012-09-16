@@ -15,5 +15,8 @@ export SUBLIME_DATA="$HOME/Library/Application Support/Sublime Text 2"
 export SUBLIME_PKG="$SUBLIME_DATA/Packages"
 export SUBLIME_USR="$SUBLIME_PKG/User"
 
+# Autoenv
+source /usr/local/Cellar/autoenv/0.1.0/activate.sh
+
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
