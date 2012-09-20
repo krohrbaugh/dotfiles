@@ -16,6 +16,7 @@ alias gs="git status"
 
 alias bx="bundle exec $1"
 alias r="rails"
+alias rake="noglob rake"
 
 # alias e="subl -n ."
 alias e="vim ."
