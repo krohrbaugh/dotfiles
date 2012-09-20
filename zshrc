@@ -35,6 +35,6 @@ source $DOT_FILES/zsh/aliases
 source $DOT_FILES/zsh/functions
 
 # Detect proxy settings
-source $DOT_FILES/misc/proxy-detect
+# source $DOT_FILES/misc/proxy-detect
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
