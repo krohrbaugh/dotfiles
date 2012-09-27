@@ -15,8 +15,12 @@ alias dotfiles="$EDITOR $DOT_FILES"
 alias gs="git status"
 
 alias bx="bundle exec $1"
+alias be="bundle exec $1"
+
+alias fr="foreman run $1"
+
 alias r="rails"
-alias rake="noglob rake"
+# alias rake="noglob rake"
 
 # alias e="subl -n ."
 alias e="vim ."
