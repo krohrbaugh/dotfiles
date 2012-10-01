@@ -1,11 +1,11 @@
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$PATH"
+export PATH="$HOME/bin:$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$PATH"
 
 # Editor settings
 #   Sublime: 'subl -w'
 #   MacVim:  'mvim'
 #   Vim:     'vim'
-export EDITOR="vim"
-export GEM_EDITOR="vim"
+export EDITOR="subl -w"
+export GEM_EDITOR="subl -w"
 
 # Node
 export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
@@ -15,8 +15,12 @@ export SUBLIME_DATA="$HOME/Library/Application Support/Sublime Text 2"
 export SUBLIME_PKG="$SUBLIME_DATA/Packages"
 export SUBLIME_USR="$SUBLIME_PKG/User"
 
-# Autoenv
-source /usr/local/Cellar/autoenv/0.1.0/activate.sh
+# Ruby GC Tuning
+export RUBY_HEAP_MIN_SLOTS=1000000
+export RUBY_HEAP_SLOTS_INCREMENT=1000000
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_GC_MALLOC_LIMIT=100000000
+export RUBY_HEAP_FREE_MIN=500000
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
