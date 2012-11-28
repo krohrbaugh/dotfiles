@@ -1,0 +1,52 @@
+#!/bin/sh
+#
+# This script was written by Toby White under an unknown license, and published
+# on the Git mailing list:
+#
+#   http://kerneltrap.org/mailarchive/git/2007/11/21/435536
+#
+# Superficial changes were made by Nathan de Vries to allow the script to be
+# run under Leopard.
+#
+# Adapted by Daniel Miller
+# - allow changes to be saved back to the working copy when diffing against HEAD
+# - work when FileMerge is already open
+# - always compare archived copies so ignored files are excluded from the diff
+#
+# Known issues:
+# - Always uses the same two directories (/tmp/git-opendiff-old and
+#   /tmp/git-opendiff-new); THEY WILL BE DELETED IF THEY ALREADY EXIST.
+#   Ugly, I know, but it makes the script work even if FileMerge is open.
+# - Does not show unstaged changes.
+
+if test $# = 0; then
+    echo "usage: $0 (--cached | <ref>) [<ref>]"
+    exit
+elif test "$1" = --cached; then
+    OLD=HEAD
+    NEW=`git write-tree`
+    shift
+fi
+if test $# -gt 0; then
+    OLD="$1"; shift
+fi
+test $# -gt 0 && test -z "$CACHED" && NEW="$1"
+
+TMP_OLD=/tmp/git-opendiff-old
+TMP_NEW=/tmp/git-opendiff-new
+test -d $TMP_OLD && rm -rf $TMP_OLD; mkdir $TMP_OLD
+test -d $TMP_NEW && rm -rf $TMP_NEW; mkdir $TMP_NEW
+
+TMP_OLD=$TMP_OLD/$OLD; mkdir -p $TMP_OLD
+git archive --format=tar $OLD | (cd $TMP_OLD; tar xf -)
+
+if test -z "$NEW"; then
+    SAVE_TO=$(git rev-parse --show-cdup)
+    test -z "$cdup" && SAVE_TO=.
+    git archive --format=tar HEAD | (cd $TMP_NEW; tar xf -)
+    opendiff $TMP_OLD $TMP_NEW -merge $SAVE_TO
+else
+    TMP_NEW=$TMP_NEW/$NEW; mkdir -p $TMP_NEW
+    git archive --format=tar $NEW | (cd $TMP_NEW; tar xf -)
+    opendiff $TMP_OLD $TMP_NEW
+fi

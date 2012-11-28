@@ -1,4 +1,4 @@
-export PATH="$HOME/bin:$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$PATH"
+export PATH="$HOME/bin:$DOT_FILES/bin:$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$PATH"
 
 # Editor settings
 #   Sublime: 'subl -w'

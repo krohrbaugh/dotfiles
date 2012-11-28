@@ -1,0 +1,14 @@
+#!/bin/sh
+rm -rfv `find . -name .git`
+if [ -f .gitmodules ] 
+	then 
+		rm -v .gitmodules 
+fi
+if [ -f .gitconfig ] 
+	then 
+		rm -v .gitconfig 
+fi
+if [ -f .gitignore ] 
+	then 
+		rm -v .gitignore 
+fi

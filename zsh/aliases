@@ -22,13 +22,16 @@ alias fr="foreman run $1"
 alias r="rails"
 # alias rake="noglob rake"
 
-# alias e="subl -n ."
-alias e="vim ."
+alias e="subl -n ."
+# alias e="vim ."
 
 alias powlog="cd ~/Library/Logs/Pow/apps && ls"
 
 # Clear Xcode's DerivedData cache
 alias ded="rm -rf ~/Library/Developer/Xcode/DerivedData"
+
+# Purge gems
+alias gem-purge="gem list | cut -d' ' -f1 | xargs gem uninstall -aIx"
 
 # Reset TERM when using tmux
 alias tmux="TERM=screen-256color-bce tmux"
@@ -36,7 +39,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 #
 # Network-related
 #
-alias flushdns="dscacheutil -flushcache"
+alias flushdns="sudo killall -HUP mDNSResponder"
 
 #
 # PG-related
