@@ -6,7 +6,6 @@ alias reload="source ~/.zshrc"
 #
 # Utility
 #
-alias df="cd $DOT_FILES"
 alias dotfiles="$EDITOR $DOT_FILES"
 
 #
@@ -42,6 +41,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias flushdns="sudo killall -HUP mDNSResponder"
 
 #
-# PG-related
+# Modcloth-related
 #
-alias fixvpn="sudo ruby $DOT_FILES/misc/patch_juniper_pac.rb"
+alias ssh-personal="cp ~/.ssh/personal/id_rsa* ~/.ssh"
+alias ssh-modcloth="cp ~/.ssh/modcloth/id_rsa* ~/.ssh"
