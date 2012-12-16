@@ -19,7 +19,6 @@ alias be="bundle exec $1"
 alias fr="foreman run $1"
 
 alias r="rails"
-# alias rake="noglob rake"
 
 alias e="subl -n ."
 # alias e="vim ."
