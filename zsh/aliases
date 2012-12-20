@@ -25,6 +25,8 @@ alias e="subl -n ."
 
 alias powlog="cd ~/Library/Logs/Pow/apps && ls"
 
+alias knife="bundle exec knife"
+
 # Clear Xcode's DerivedData cache
 alias ded="rm -rf ~/Library/Developer/Xcode/DerivedData"
 
@@ -44,3 +46,7 @@ alias flushdns="sudo killall -HUP mDNSResponder"
 #
 alias ssh-personal="cp ~/.ssh/personal/id_rsa* ~/.ssh"
 alias ssh-modcloth="cp ~/.ssh/modcloth/id_rsa* ~/.ssh"
+
+alias mc-chef-private="export MPC=1; unset JOYENT_PRODUCTION"
+alias mc-chef-production="export JOYENT_PRODUCTION=1; unset MPC"
+alias mc-chef-demo="unset MPC; unset JOYENT_PRODUCTION"
