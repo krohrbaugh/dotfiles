@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+# -*- ruby -*-
+
+puts "Generating project .tags..."
+system "ctags -R -f .tags"
+
+require 'bundler'
+if defined?(Bundler)
+  paths = Bundler.load.specs.map(&:full_gem_path)
+  puts 'Generating bundled .gemtags...'
+  system "ctags -R -f .gemtags #{paths.join(' ')}"
+end
