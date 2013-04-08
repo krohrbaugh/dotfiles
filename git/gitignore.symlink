@@ -1,0 +1,23 @@
+# mac cruft
+.DS_Store
+
+# scm cruft
+**.orig
+.svn
+
+# ide/editor cruft
+*~
+\#*
+.\#*
+/nbproject/
+/*.tmpproj
+tmtags
+**.swp
+*.rbc
+tags
+.tags
+.gemtags
+
+# ruby cruft
+.rvmrc
+.rbenv-gemsets

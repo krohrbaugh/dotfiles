@@ -1,0 +1,48 @@
+[hub]
+	protocol = https
+[user]
+	name = AUTHORNAME
+	email = AUTHOREMAIL
+[credential]
+	helper = osxkeychain
+[alias]
+	co = checkout
+  	lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit"
+	recent = "for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(committerdate:short) - %(refname:short) by: %(authorname)'"
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
+ 	attributesfile = !$DOT_FILES/git/attributes
+ 	trustctime = false
+ 	editor = vim
+  	# To use MacVim for the editor:
+  	# editor = 'mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
+[apply]
+	whitespace = nowarn
+[mergetool]
+	keepBackup = false
+[difftool]
+	prompt = false
+[help]
+	autocorrect = 1
+[push]
+	default = simple
+[format]
+	pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
+[merge "gemfilelock"]
+  name = Handle Gemfile.lock merge conflicts
+  driver = bundle install
+[merge "railsschema"]
+  name = Pick newer Rails schema version
+  driver = "ruby -e '\n\
+		system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B)\n\
+		b = File.read(%(%A))\n\
+		b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n=+\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n>+ .*/) do\n\
+		  %(ActiveRecord::Schema.define(:version => #{[$1, $2].max}) do)\n\
+		end\n\
+		File.open(%(%A), %(w)) {|f| f.write(b)}\n\
+		exit 1 if b.include?(%(<)*%L)'"
