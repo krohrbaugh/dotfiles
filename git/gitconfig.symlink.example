@@ -19,8 +19,10 @@
  	attributesfile = !$DOT_FILES/git/attributes
  	trustctime = false
  	editor = vim
-  	# To use MacVim for the editor:
-  	# editor = 'mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
+	# To use MacVim for the editor:
+	# editor = 'mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
+[pull]
+	rebase = true
 [apply]
 	whitespace = nowarn
 [mergetool]
