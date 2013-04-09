@@ -26,8 +26,16 @@ cd ~/Code/personal/dotfiles
 
 To set your Mac's machine name:
 
- 1. Edit the script to set the desired name
- 1. Run `./osx/set-machine-name.sh`
+1. Edit the script to set the desired name
+1. Run `./osx/set-machine-name.sh`
+
+### Sublime Text 2
+
+To configure Sublime Text 2's user directory:
+
+1. [Install Sublime Text (dev channel)][2]
+1. [Install Package Control][3]
+1. Run `sublime2/install.sh`
 
 ## Environment
 I am running on Mac OS X, using zsh as my shell.
@@ -42,6 +50,6 @@ Many aspects of this setup is based on (if not straight copied) from other peopl
 
 [0]: https://github.com/mathiasbynens/dotfiles
 [1]: https://github.com/ryanb/dotfiles/
+[2]: http://www.sublimetext.com/dev
+[3]: http://wbond.net/sublime_packages/package_control/installation
 [4]: https://github.com/holman/dotfiles/
-[2]: https://github.com/robbyrussell/oh-my-zsh
-[3]: https://github.com/carlhuda/janus

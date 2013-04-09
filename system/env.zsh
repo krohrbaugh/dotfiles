@@ -2,5 +2,5 @@
 #   Sublime: 'subl -w'
 #   MacVim:  'mvim'
 #   Vim:     'vim'
-export EDITOR="subl -w"
-export GEM_EDITOR="subl -w"
+export EDITOR="subl"
+export GEM_EDITOR="subl"
