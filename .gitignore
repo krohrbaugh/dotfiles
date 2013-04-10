@@ -1,2 +1,3 @@
-sublime2/User/Package\ Control.last-run
+sublime2/**/*.last-run
+sublime2/**/*.tmTheme.cache
 git/gitconfig.symlink
