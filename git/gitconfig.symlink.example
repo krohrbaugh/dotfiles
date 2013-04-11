@@ -19,6 +19,7 @@
  	attributesfile = !$DOT_FILES/git/attributes
  	trustctime = false
  	editor = vim
+ 	autocrlf = input
 	# To use MacVim for the editor:
 	# editor = 'mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
 [pull]
