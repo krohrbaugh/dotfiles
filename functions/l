@@ -1,0 +1,2 @@
+# Locks the screen by starting password-protected screen saver
+open -a /System/Library/Frameworks/ScreenSaver.framework//Versions/A/Resources/ScreenSaverEngine.app
