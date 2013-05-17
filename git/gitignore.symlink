@@ -21,3 +21,4 @@ tags
 # ruby cruft
 .rvmrc
 .rbenv-gemsets
+local.rake
