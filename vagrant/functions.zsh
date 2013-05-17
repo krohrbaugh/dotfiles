@@ -14,3 +14,5 @@ vagrant-uuid() {
     echo "No UUID found"    
   fi
 }
+
+alias vagrant-snap="vboxmanage snapshot $(vagrant-uuid)"
