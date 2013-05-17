@@ -22,6 +22,8 @@
  	autocrlf = input
 	# To use MacVim for the editor:
 	# editor = 'mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
+[rerere]
+	enabled = true
 [pull]
 	rebase = true
 [apply]
