@@ -10,7 +10,7 @@ else
 fi
 
 git_branch() {
-  echo $($git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
+  echo $($git rev-parse --abbrev-ref HEAD)
 }
 
 git_dirty() {
