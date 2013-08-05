@@ -83,12 +83,9 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(user_info) in $(directory_name) $(git_dirty)$(need_push)$(rb_prompt)\n› '
-set_prompt () {
-  export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
-}
+export PROMPT=$'$(user_info) in $(directory_name) $(git_dirty)$(need_push)$(rb_prompt)\n› '
 
 precmd() {
   title "zsh" "%m" "%55<...<%~"
-  set_prompt
+  print
 }
