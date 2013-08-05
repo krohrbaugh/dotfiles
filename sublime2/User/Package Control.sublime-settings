@@ -2,33 +2,27 @@
 	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
-		"AdvancedNewFile",
 		"Alignment",
 		"ChangeQuotes",
-		"CoffeeScript",
 		"CTags",
 		"Dayle Rees Color Schemes",
 		"Git",
-		"Http Requester",
+		"GitGutter",
 		"IndentGuides",
-		"jQuery",
 		"Origami",
 		"Package Control",
-		"Prefixr",
 		"Quick File Creator",
 		"Rails Related Files",
 		"RSpec",
-		"RubyTest",
-		"Sass",
 		"SCSS",
 		"SideBarEnhancements",
 		"SideBarGit",
 		"SublimeCodeIntel",
 		"SublimeLinter",
+		"Surround",
 		"Tag",
 		"Theme - Soda",
-		"TomDoc+",
-		"VintageEx",
-		"ZenCoding"
+		"Vintage Surround",
+		"VintageEx"
 	]
 }
