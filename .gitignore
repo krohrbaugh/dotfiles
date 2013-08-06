@@ -1,3 +1,6 @@
 sublime2/**/*.last-run
 sublime2/**/*.tmTheme.cache
 git/gitconfig.symlink
+
+# Ignore hidden files in sub-directories
+**/.*
