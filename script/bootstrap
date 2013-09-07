@@ -53,6 +53,7 @@ install_dotfiles () {
   overwrite_all=false
   backup_all=false
   skip_all=false
+  nuke_all=false
 
   for source in `find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink`
   do
@@ -65,9 +66,9 @@ install_dotfiles () {
       backup=false
       skip=false
 
-      if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
+      if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ] && [ "$nuke_all" == "false" ]
       then
-        user "File already exists: `basename $source`, what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
+        user "File already exists: `basename $source`, what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all, [n]uke, [N]uke all?"
         read -n 1 action
 
         case "$action" in
@@ -82,6 +83,12 @@ install_dotfiles () {
           s )
             skip=true;;
           S )
+            skip_all=true;;
+          n )
+            overwrite=true
+            skip=true;;
+          N )
+            overwrite_all=true
             skip_all=true;;
           * )
             ;;
@@ -116,18 +123,6 @@ install_dotfiles () {
 
 setup_gitconfig
 install_dotfiles
-
-# If we are on a mac, lets install and setup homebrew
-if [ "$(uname -s)" == "Darwin" ]
-then
-  info "installing dependencies"
-  if . bin/dot > /tmp/dotfiles-dot 2>&1
-  then
-    success "dependencies installed"
-  else
-    fail "error installing dependencies"
-  fi
-fi
 
 echo ''
 echo '  All installed!'
