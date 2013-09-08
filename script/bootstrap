@@ -3,15 +3,10 @@
 # bootstrap installs things.
 
 DOTFILES_ROOT="`pwd`"
-source "${DOTFILES_ROOT}/script/shared/io_helpers.sh"
-source "${DOTFILES_ROOT}/script/gitconfig"
+source "${DOTFILES_ROOT}/script/shared/common.sh"
+source "${DOTFILES_ROOT}/script/shared/generate_gitconfig.sh"
 
 set -e
-
-link_files () {
-  ln -s $1 $2
-  success "linked $1 to $2"
-}
 
 install_dotfiles () {
   info 'installing dotfiles'
@@ -34,7 +29,7 @@ install_dotfiles () {
 
       if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ] && [ "$nuke_all" == "false" ]
       then
-        user "File already exists: `basename $source`, what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all, [n]uke, [N]uke all?"
+        user "File already exists: ~/`basename $dest`, what do you want to do? [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all, [n]uke, [N]uke all?"
         read -n 1 action
 
         case "$action" in
@@ -63,30 +58,30 @@ install_dotfiles () {
 
       if [ "$overwrite" == "true" ] || [ "$overwrite_all" == "true" ]
       then
-        rm -rf $dest
-        success "removed $dest"
+        remove_file $dest
       fi
 
       if [ "$backup" == "true" ] || [ "$backup_all" == "true" ]
       then
-        mv $dest $dest\.backup
-        success "moved $dest to $dest.backup"
+        move_file $dest $dest\.backup
       fi
 
       if [ "$skip" == "false" ] && [ "$skip_all" == "false" ]
       then
-        link_files $source $dest
+        link_file $source $dest
       else
         success "skipped $source"
       fi
 
     else
-      link_files $source $dest
+      link_file $source $dest
     fi
 
   done
 }
 
+echo ''
+generate_gitconfig
 install_dotfiles
 echo ''
 echo '  Installed!'
