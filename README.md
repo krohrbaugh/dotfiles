@@ -10,7 +10,7 @@ The dotfiles can be installed via Boxen (preferred) or manually using shell scri
 ### Boxen-based install (personal manifest)
 Inside your personal manifest file (e.g., `/opt/boxen/repo/modules/people/manifest/<github_login>.pp`):
 
-```puppet
+```pp
 $dotfiles = "${boxen::config::srcdir}/dotfiles"
 
 repository { $dotfiles:
