@@ -2,7 +2,7 @@
 # File locations
 #
 export PROJECTS=$HOME/Code
-export ZSH=$PROJECTS/personal/dotfiles
+export ZSH=$PROJECTS/my/dotfiles
 export DOT_FILES=$ZSH
 
 # Source sensitive settings excluded from dotfiles repo

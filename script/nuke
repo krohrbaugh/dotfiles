@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# nuke dotfiles install with extreme prejudice (no confirmation)
+
+DOTFILES_ROOT="`pwd`"
+source "${DOTFILES_ROOT}/script/shared/io_helpers.sh"
+source "${DOTFILES_ROOT}/script/shared/uninstall.sh"
+
+set -e
+
+
+echo ''
+delete_all
+echo ''
+echo '   Nuked!'

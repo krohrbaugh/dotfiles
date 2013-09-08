@@ -1,2 +1,3 @@
-dotfiles=$PROJECTS/personal/dotfiles
-gemsets=$PROJECTS/personal/gemsets
+dotfiles=$PROJECTS/my/dotfiles
+boxen=$PROJECTS/my/boxen
+gemsets=$PROJECTS/my/gemsets

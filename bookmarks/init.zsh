@@ -4,11 +4,15 @@
 #
 # Use:
 #   1. Define bookmarks in bookmark files (one bookmark per line)
-#       # ./bookmarks/personal
+#       # ./bookmarks/global
 #       name=path/to/bookmark
 #   2. Use bookmarks in shell:
 #       $ ~name # => cd path/to/bookmark
 #   3. There is no step 3
+#
+# To add bookmarks but exclude them from git, create a hidden file:
+#
+#   touch bookmarks/.secret
 #
 setopt autocd
 
