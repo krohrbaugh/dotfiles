@@ -12,15 +12,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
-# Set standby delay to 3 hours (default is 1 hour)
-sudo pmset -a standbydelay 10800
-
 # Menu bar: disable transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
-
-# Menu bar: show remaining battery time (on pre-10.8); hide percentage
-defaults write com.apple.menuextra.battery ShowPercent -string "NO"
-defaults write com.apple.menuextra.battery ShowTime -string "YES"
 
 # Menu bar: hide the useless Time Machine and Volume icons
 defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"
@@ -152,13 +145,13 @@ defaults write com.apple.BezelServices kDimTime -int 300
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en" "nl"
-defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=EUR"
-defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
-defaults write NSGlobalDomain AppleMetricUnits -bool true
+defaults write NSGlobalDomain AppleLanguages -array "en"
+defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
+defaults write NSGlobalDomain AppleMetricUnits -bool false
 
 # Set the timezone; see `systemsetup -listtimezones` for other values
-# systemsetup -settimezone "Europe/Brussels" > /dev/null
+systemsetup -settimezone "America/Los_Angeles" > /dev/null
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
@@ -366,22 +359,40 @@ ln -sf /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app /Appl
 # 10: Put display to sleep
 # 11: Launchpad
 # 12: Notification Center
-# Top left screen corner → Mission Control
-defaults write com.apple.dock wvous-tl-corner -int 2
+# Top left screen corner
+defaults write com.apple.dock wvous-tl-corner -int 0
 defaults write com.apple.dock wvous-tl-modifier -int 0
-# Top right screen corner → Desktop
-defaults write com.apple.dock wvous-tr-corner -int 4
+# Top right screen corner
+defaults write com.apple.dock wvous-tr-corner -int 0
 defaults write com.apple.dock wvous-tr-modifier -int 0
-# Bottom left screen corner → Start screen saver
-defaults write com.apple.dock wvous-bl-corner -int 5
+# Bottom left screen corner
+defaults write com.apple.dock wvous-bl-corner -int 0
 defaults write com.apple.dock wvous-bl-modifier -int 0
+# Bottom right screen corner
+defaults write com.apple.dock wvous-br-corner -int 0
+defaults write com.apple.dock wvous-br-modifier -int 0
 
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################
 
 # Set Safari’s home page to `about:blank` for faster loading
-defaults write com.apple.Safari HomePage -string "about:blank"
+defaults write com.apple.Safari HomePage -string "http://www.google.com/"
+
+# New windows open with:
+# 0 = Homepage
+# 1 = Empty page
+# 2 = Same page
+# 4 = Top Sites
+# 5 = Tabs for Favorites Bar
+defaults write com.apple.Safari NewWindowBehavior -int 1
+
+# New tabs open with:
+# 0 = Homepage
+# 1 = Empty page
+# 2 = Same page
+# 4 = Top Sites
+defaults write com.apple.Safari NewTabBehavior -int 1
 
 # Prevent Safari from opening ‘safe’ files automatically after downloading
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
@@ -517,15 +528,15 @@ defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://
 ###############################################################################
 # KeyRemap4MacBook                                                            #
 ###############################################################################
-KEYMAP=$HOME/Library/Application\ Support/KeyRemap4MacBook/private.xml
-SRCMAP=$ZSH/osx/key_remap.xml
-if [[ -f $KEYMAP && -f $SRCMAP ]]
-then
-  rm "$KEYMAP"
-  ln -sf $SRCMAP "$KEYMAP"
-fi
-unset KEYMAP
-unset SRCMAP
+# KEYMAP=$HOME/Library/Application\ Support/KeyRemap4MacBook/private.xml
+# SRCMAP=$ZSH/osx/key_remap.xml
+# if [[ -f $KEYMAP && -f $SRCMAP ]]
+# then
+  # rm "$KEYMAP"
+  # ln -sf $SRCMAP "$KEYMAP"
+# fi
+# unset KEYMAP
+# unset SRCMAP
 
 ###############################################################################
 # SizeUp.app                                                                  #
@@ -580,6 +591,11 @@ unset SRCMAP
 
 # Hide the app in the background if it’s not the front-most window
 # defaults write com.twitter.twitter-mac HideInBackground -bool true
+
+###############################################################################
+# Custom: Used to signal Puppet                                               #
+###############################################################################
+defaults write us.rohrbaugh.osx-defaults enabled -bool true
 
 ###############################################################################
 # Kill affected applications                                                  #
