@@ -526,19 +526,6 @@ defaults write com.google.Chrome ExtensionInstallSources -array "https://*.githu
 defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
 
 ###############################################################################
-# KeyRemap4MacBook                                                            #
-###############################################################################
-# KEYMAP=$HOME/Library/Application\ Support/KeyRemap4MacBook/private.xml
-# SRCMAP=$ZSH/osx/key_remap.xml
-# if [[ -f $KEYMAP && -f $SRCMAP ]]
-# then
-  # rm "$KEYMAP"
-  # ln -sf $SRCMAP "$KEYMAP"
-# fi
-# unset KEYMAP
-# unset SRCMAP
-
-###############################################################################
 # SizeUp.app                                                                  #
 ###############################################################################
 

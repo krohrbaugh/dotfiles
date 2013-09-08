@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <root>
   <item>
-    <name>Das Keyboard for Mac (through KVM)</name>
+    <name>Das Keyboard for Mac</name>
 
     <item>
-      <name>Enable Power/Sleep Button</name>
+      <name>Power/Sleep Button</name>
+      <identifier>private.power_sleep_button</identifier>
       <appendix>F1 to Power</appendix>
       <appendix>Fn+F1 to F1</appendix>
-      <identifier>private.enable_power_sleep_button</identifier>
       <autogen>__KeyToConsumer__ KeyCode::F1, ConsumerKeyCode::POWER</autogen>
       <autogen>__KeyToKey__ KeyCode::F1, ModifierFlag::FN, KeyCode::F1</autogen>
     </item>
 
     <item>
-      <name>Enable Mission Control/Dashboard</name>
+      <name>Mission Control/Dashboard</name>
+      <identifier>private.mission_control_dashboard</identifier>
       <appendix>F3 to Mission Control</appendix>
       <appendix>Fn+F3 to F3</appendix>
       <appendix>F4 to Dashboard</appendix>
       <appendix>Fn+F4 to F4</appendix>
-      <identifier>private.enable_mission_control_dashboard</identifier>
       <autogen>__KeyToKey__ KeyCode::F3, KeyCode::MISSION_CONTROL</autogen>
       <autogen>__KeyToKey__ KeyCode::F3, ModifierFlag::FN, KeyCode::F3</autogen>
       <autogen>__KeyToKey__ KeyCode::F4, KeyCode::DASHBOARD</autogen>
@@ -26,14 +26,14 @@
     </item>
 
     <item>
-      <name>Enable Media Controls</name>
+      <name>Media Controls</name>
+      <identifier>private.media_controls</identifier>
       <appendix>F6 to Music Prev</appendix>
       <appendix>Fn+F6 to F6</appendix>
       <appendix>F7 to Music Play</appendix>
       <appendix>Fn+F7 to F7</appendix>
       <appendix>F8 to Music Next</appendix>
       <appendix>Fn+F8 to F8</appendix>
-      <identifier>private.enable_media_controls</identifier>
       <autogen>__KeyToConsumer__ KeyCode::F6, ConsumerKeyCode::MUSIC_PREV</autogen>
       <autogen>__KeyToKey__ KeyCode::F6, ModifierFlag::FN, KeyCode::F6</autogent>
       <autogen>__KeyToConsumer__ KeyCode::F7, ConsumerKeyCode::MUSIC_PLAY</autogen>
@@ -43,14 +43,14 @@
     </item>
 
     <item>
-      <name>Enable Volume Controls</name>
+      <name>Volume Controls</name>
+      <identifier>private.volume_controls</identifier>
       <appendix>F9 to Mute</appendix>
       <appendix>Fn+F9 to F9</appendix>
       <appendix>F10 to Volume Down</appendix>
       <appendix>Fn+F10 to F10</appendix>
       <appendix>F11 to Volume Up</appendix>
       <appendix>Fn+F11 to F11</appendix>
-      <identifier>private.enable_volume_controls</identifier>
       <autogen>__KeyToConsumer__ KeyCode::F9, ConsumerKeyCode::VOLUME_MUTE</autogen>
       <autogen>__KeyToKey__ KeyCode::F9, ModifierFlag::FN, KeyCode::F9</autogen>
       <autogen>__KeyToConsumer__ KeyCode::F10, ConsumerKeyCode::VOLUME_DOWN</autogen>
@@ -60,8 +60,8 @@
     </item>
 
     <item>
-      <name>Enable Brightness Controls</name>
-      <identifier>private.enable_brightness_controls</identifier>
+      <name>Brightness Controls</name>
+      <identifier>private.brightness_controls</identifier>
       <autogen>__KeyToConsumer__ KeyCode::F14, ConsumerKeyCode::BRIGHTNESS_DOWN</autogen>
       <autogen>__KeyToConsumer__ KeyCode::F15, ConsumerKeyCode::BRIGHTNESS_UP</autogen>
     </item>
