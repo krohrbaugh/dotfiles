@@ -1,16 +1,19 @@
 # Dot Files 
+
 My basic user preferences and configuration files, mostly cobbled together from
 various examples and repositories that I've found across the web.
 
 This configuration is tuned for [my Boxen setup][my-boxen]. Steal from both for maximum awesome.
 
 ## Installation
+
 The dotfiles can be installed via Boxen (preferred) or manually using shell scripts:
 
 ### Boxen-based install (personal manifest)
+
 Inside your personal manifest file (e.g., `/opt/boxen/repo/modules/people/manifest/<github_login>.pp`):
 
-```pp
+```puppet
 $dotfiles = "${boxen::config::srcdir}/dotfiles"
 
 repository { $dotfiles:
@@ -30,6 +33,7 @@ exec { "install dotfiles":
 _NOTE:_ Boxen-based installs will _not_ generate a `~/.gitconfig` file, since it requires user input (name & email address). See the manual install section for directions for generating and linking just this file.
 
 ### Manual install (shell script)
+
 If Boxen isn't an option, there are several scripts for installing and removing the dotfiles in the `script` directory.
 
 To install manually:
@@ -49,6 +53,7 @@ cd ~/Code/my/dotfiles
 ```
 
 ### OS X Preferences
+
 On a fresh Mac OS X install, you may also wish to set some 
 [sensible system preferences][0]:
 
@@ -67,6 +72,7 @@ hostname=my_hostname ./osx/set-machine-name.sh
 ```
 
 ### Sublime Text 2
+
 To configure Sublime Text 2's user directory:
 
 1. [Install Sublime Text (dev channel)][2]
@@ -76,9 +82,11 @@ To configure Sublime Text 2's user directory:
 _NOTE:_ Consider Boxen for this task, as it can install Sublime Text, package control and perform this install all at once.
 
 ## Environment
+
 I am running on Mac OS X, using zsh as my shell.
 
 ## Credits
+
 Many aspects of this setup is based on (if not straight copied) from other people's setups:
 
  - [Zach Holman's dotfiles][4]
