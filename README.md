@@ -13,7 +13,7 @@ The dotfiles can be installed via Boxen (preferred) or manually using shell scri
 
 Inside your personal manifest file (e.g., `/opt/boxen/repo/modules/people/manifest/<github_login>.pp`):
 
-```puppet
+``` puppet
 $dotfiles = "${boxen::config::srcdir}/dotfiles"
 
 repository { $dotfiles:
@@ -38,7 +38,7 @@ If Boxen isn't an option, there are several scripts for installing and removing 
 
 To install manually:
 
-```sh
+``` sh
 mkdir -p ~/Code/my
 git clone https://github.com/krohrbaugh/dotfiles.git ~/Code/my/dotfiles
 cd ~/Code/my/dotfiles
@@ -47,7 +47,7 @@ cd ~/Code/my/dotfiles
 
 To generate just the `~/.gitconfig` file (assuming directories are created and the repository was cloned):
 
-```sh
+``` sh
 cd ~/Code/my/dotfiles
 ./script/gitconfig
 ```
@@ -59,14 +59,14 @@ On a fresh Mac OS X install, you may also wish to set some
 
 _NOTE:_ Consider Boxen for this task, as it simplifies system setup.
 
-```sh
+``` sh
 cd ~/Code/my/dotfiles
 ./osx/set-defaults.sh
 ```
 
 To set your Mac's machine name:
 
-```sh
+``` sh
 cd ~/Code/my/dotfiles
 hostname=my_hostname ./osx/set-machine-name.sh
 ```
