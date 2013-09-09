@@ -580,11 +580,6 @@ defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://
 # defaults write com.twitter.twitter-mac HideInBackground -bool true
 
 ###############################################################################
-# Custom: Used to signal Puppet                                               #
-###############################################################################
-defaults write us.rohrbaugh.osx-defaults enabled -bool true
-
-###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
