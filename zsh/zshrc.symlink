@@ -5,10 +5,10 @@ export PROJECTS=$HOME/Code
 export ZSH=$PROJECTS/my/dotfiles
 export DOT_FILES=$ZSH
 
-# Source sensitive settings excluded from dotfiles repo
-if [[ -a ~/.localrc ]]
+# Source local settings excluded from dotfiles repo
+if [[ -a $HOME/.localrc.before ]]
 then
-	source ~/.localrc
+	source $HOME/.localrc.before
 fi
 
 # Source ZSH files
@@ -36,5 +36,11 @@ for file in ${(M)config_files:#*/completion.zsh}
 do
   source $file
 done
+
+# Source local settings excluded from dotfiles repo
+if [[ -a $HOME/.localrc ]]
+then
+  source $HOME/.localrc
+fi
 
 unset config_files
