@@ -7,8 +7,15 @@
 	helper = osxkeychain
 [alias]
 	co = checkout
-  	lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit"
+	st = status
+	ci = commit
+	br = branch
+  lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit"
 	recent = "for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(committerdate:short) - %(refname:short) by: %(authorname)'"
+  refresh = !bash -c "cd .; current_branch=`git name-rev --name-only head`;echo $current_branch; if [[ 'xx' != 'x${ current_branch}x' ]];then git checkout master; git pull; git checkout ${current_branch};git merge --no-ff master; fi"
+  # Check how the merge of two branches will go:
+  # 	`git dry-merge dev master` to see how merging dev into master will go
+  dry-merge = "!f() { git merge-tree `git merge-base $2 $1` $2 $1; }; f"
 [color]
 	diff = auto
 	status = auto
