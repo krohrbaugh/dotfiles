@@ -3,12 +3,14 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"ApplySyntax",
 		"ChangeQuotes",
 		"CTags",
 		"Dayle Rees Color Schemes",
 		"Git",
 		"GitGutter",
 		"IndentGuides",
+		"MarkdownEditing",
 		"Origami",
 		"Package Control",
 		"Puppet",
