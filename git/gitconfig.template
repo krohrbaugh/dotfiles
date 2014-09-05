@@ -1,10 +1,6 @@
-[hub]
-	protocol = https
 [user]
 	name = AUTHORNAME
 	email = AUTHOREMAIL
-[credential]
-	helper = osxkeychain
 [alias]
 	co = checkout
 	st = status
@@ -16,6 +12,8 @@
   # Check how the merge of two branches will go:
   # 	`git dry-merge dev master` to see how merging dev into master will go
   dry-merge = "!f() { git merge-tree `git merge-base $2 $1` $2 $1; }; f"
+[apply]
+	whitespace = nowarn
 [color]
 	diff = auto
 	status = auto
@@ -27,47 +25,49 @@
  	trustctime = false
  	autocrlf = input
  	editor = subl -n -w
- 	# To use Sublime Text for the editor:
+ 	# To use Sublime for the editor:
  	# editor = subl -n -w
 	# To use MacVim for the editor:
 	# editor = 'mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
-[rerere]
-	enabled = true
-[pull]
-	rebase = true
-[apply]
-	whitespace = nowarn
-[mergetool]
-	keepBackup = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[merge]
+[credential]
+	helper = osxkeychain
+[diff]
 	tool = Kaleidoscope
 [difftool]
 	prompt = false
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-	tool = Kaleidoscope
-[help]
-	autocorrect = 1
-[push]
-	default = simple
 [format]
 	pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
+[help]
+	autocorrect = 1
+[http]
+  postBuffer = 524288000
+[hub]
+	protocol = https
+[merge]
+	tool = Kaleidoscope
 [merge "gemfilelock"]
   name = Handle Gemfile.lock merge conflicts
   driver = bundle install
-[merge "railsschema"]
-  name = Pick newer Rails schema version
-  driver = "ruby -e '\n\
-		system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B)\n\
-		b = File.read(%(%A))\n\
-		b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n=+\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n>+ .*/) do\n\
-		  %(ActiveRecord::Schema.define(:version => #{[$1, $2].max}) do)\n\
-		end\n\
-		File.open(%(%A), %(w)) {|f| f.write(b)}\n\
-		exit 1 if b.include?(%(<)*%L)'"
-[http]
-  postBuffer = 524288000
+# [merge "railsschema"]
+  # name = Pick newer Rails schema version
+  # driver = "ruby -e '\n\
+	# 	system %(git), %(merge-file), %(--marker-size=%L), %(%A), %(%O), %(%B)\n\
+	# 	b = File.read(%(%A))\n\
+	# 	b.sub!(/^<+ .*\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n=+\\nActiveRecord::Schema\\.define.:version => (\\d+). do\\n>+ .*/) do\n\
+	# 	  %(ActiveRecord::Schema.define(:version => #{[$1, $2].max}) do)\n\
+	# 	end\n\
+	# 	File.open(%(%A), %(w)) {|f| f.write(b)}\n\
+	# 	exit 1 if b.include?(%(<)*%L)'"
+[mergetool]
+	keepBackup = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[pull]
+	rebase = true
+[push]
+	default = simple
+[rerere]
+	enabled = true
