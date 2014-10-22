@@ -46,15 +46,6 @@ need_push () {
   fi
 }
 
-rb_prompt(){
-  if (( $+commands[rbenv] ))
-  then
-	  echo "(%{$fg[red]%}rb%{$reset_color%}:%{$fg_bold[yellow]%}$(rbenv version | awk '{print $1}')%{$reset_color%})"
-	else
-	  echo ""
-  fi
-}
-
 user_info() {
   echo "%{$fg[green]%}%n@%m%{$reset_color%}"
 }
@@ -82,7 +73,7 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%{$reset_color%}"
 }
 
-export PROMPT=$'$(user_info) in $(directory_name) $(git_dirty)$(need_push)$(rb_prompt)\n› '
+export PROMPT=$'$(user_info) in $(directory_name) $(git_dirty)$(need_push)\n› '
 
 precmd() {
   title "zsh" "%m" "%55<...<%~"
