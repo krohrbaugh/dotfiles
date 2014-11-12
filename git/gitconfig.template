@@ -24,6 +24,7 @@
  	attributesfile = !$DOT_FILES/git/attributes
  	trustctime = false
  	autocrlf = input
+  pager = less -r
  	editor = subl -n -w
  	# To use Sublime for the editor:
  	# editor = subl -n -w
