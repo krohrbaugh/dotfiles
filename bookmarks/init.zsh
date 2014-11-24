@@ -38,6 +38,8 @@ do
   if [[ -d "$bookmark_path" ]]
   then
     hash -d $bookmark=$bookmark_path
+  else
+    echo "$bookmark_path not found; $bookmark bookmark not set!"
   fi
 done
 
