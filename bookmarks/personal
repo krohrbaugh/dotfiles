@@ -1,3 +1,4 @@
 dotfiles=$PROJECTS/my/dotfiles
 boxen=$PROJECTS/my/boxen
 go=$PROJECTS/go
+nginx=/opt/boxen/config/nginx
