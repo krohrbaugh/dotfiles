@@ -1,4 +1,4 @@
-# Dot Files 
+# Dot Files
 
 My basic user preferences and configuration files, mostly cobbled together from
 various examples and repositories that I've found across the web.
@@ -54,7 +54,7 @@ cd ~/Code/my/dotfiles
 
 ### OS X Preferences
 
-On a fresh Mac OS X install, you may also wish to set some 
+On a fresh Mac OS X install, you may also wish to set some
 [sensible system preferences][0]:
 
 _NOTE:_ Consider Boxen for this task, as it simplifies system setup.
@@ -71,13 +71,13 @@ cd ~/Code/my/dotfiles
 hostname=my_hostname ./osx/set-machine-name.sh
 ```
 
-### Sublime Text 2
+### Sublime Text 3
 
-To configure Sublime Text 2's user directory:
+To configure Sublime Text 3's user directory:
 
-1. [Install Sublime Text (dev channel)][2]
+1. [Install Sublime Text 3][2]
 1. [Install Package Control][3]
-1. Run `sublime2/install.sh`
+1. Run `sublime3/install.sh`
 
 _NOTE:_ Consider Boxen for this task, as it can install Sublime Text, package control and perform this install all at once.
 
@@ -95,7 +95,7 @@ Many aspects of this setup is based on (if not straight copied) from other peopl
 
 [0]: https://github.com/mathiasbynens/dotfiles
 [1]: https://github.com/ryanb/dotfiles/
-[2]: http://www.sublimetext.com/dev
+[2]: http://www.sublimetext.com/3
 [3]: http://wbond.net/sublime_packages/package_control/installation
 [4]: https://github.com/holman/dotfiles/
 [my-boxen]: https://github.com/krohrbaugh/my-boxen

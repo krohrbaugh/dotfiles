@@ -5,6 +5,12 @@ sublime2/**/*.cache
 sublime2/**/*.merged-ca-bundle
 sublime2/**/*.system-ca-bundle
 sublime2/**/*.user-ca-bundle
+sublime3/**/*.last-run
+sublime3/**/*.tmTheme.cache
+sublime3/**/*.cache
+sublime3/**/*.merged-ca-bundle
+sublime3/**/*.system-ca-bundle
+sublime3/**/*.user-ca-bundle
 git/gitconfig.symlink
 
 # Hidden files in sub-directories

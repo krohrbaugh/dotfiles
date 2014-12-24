@@ -1,13 +1,5 @@
 {
-	"auto_upgrade_last_run": null,
-	"in_process_packages":
-	[
-	],
-	"installed_dependencies":
-	[
-		"0_package_control_loader",
-		"bz2"
-	],
+	"auto_upgrade": true,
 	"installed_packages":
 	[
 		"Alignment",
@@ -17,18 +9,20 @@
 		"Git",
 		"GitGutter",
 		"HTML Mustache",
-		"IndentGuides",
 		"Origami",
 		"Package Control",
 		"Puppet",
 		"Quick File Creator",
+		"RSpec",
 		"Ruby Hash Converter",
 		"SCSS",
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"Surround",
+		"Theme - Cobalt2",
 		"Theme - Soda",
 		"ThriftSyntax",
-		"Vintage Surround"
+		"Vintage Surround",
+		"Vintageous"
 	]
 }
