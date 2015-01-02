@@ -1,4 +1,4 @@
 export GODEV=$PROJECTS/go
 export GO3RDPARTY=$GODEV/3rdparty
 export GOPATH=$GO3RDPARTY:$GODEV
-export PATH="$GODEV:$GO3RDPARTY:$PATH"
+export PATH="$GODEV/bin:$GO3RDPARTY/bin:$PATH"
