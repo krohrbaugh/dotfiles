@@ -1,5 +1,13 @@
 {
 	"auto_upgrade": true,
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2"
+	],
 	"installed_packages":
 	[
 		"Alignment",
@@ -16,6 +24,8 @@
 		"RSpec",
 		"Ruby Hash Converter",
 		"SCSS",
+		"SideBarEnhancements",
+		"SideBarGit",
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"Surround",
