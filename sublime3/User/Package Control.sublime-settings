@@ -17,6 +17,7 @@
 		"Git",
 		"GitGutter",
 		"HTML Mustache",
+		"MarkdownEditing",
 		"Origami",
 		"Package Control",
 		"Puppet",
@@ -26,6 +27,7 @@
 		"SCSS",
 		"SideBarEnhancements",
 		"SideBarGit",
+		"SmartMarkdown",
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"Surround",
@@ -33,6 +35,7 @@
 		"Theme - Soda",
 		"ThriftSyntax",
 		"Vintage Surround",
-		"Vintageous"
+		"Vintageous",
+		"WordCount"
 	]
 }
