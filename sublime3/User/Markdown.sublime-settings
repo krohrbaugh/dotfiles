@@ -3,5 +3,9 @@
   "tab_size": 2,
   "trim_trailing_white_space_on_save": true,
   "draw_centered": true,
+  "auto_wrap": true,
+  "auto_wrap_beyond_only": true,
+  "auto_wrap_break_long_word": false,
+  "wrap_width": 0,
   "rulers": [80]
 }
