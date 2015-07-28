@@ -1,5 +1,8 @@
+# OS X 10.10.4
+alias flushdns="dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+
 # OS X 10.10
-alias flushdns="sudo discoveryutil udnsflushcaches"
+#alias flushdns="sudo discoveryutil udnsflushcaches"
 
 # MacOS X 10.9
 # alias flushdns="dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
