@@ -1,5 +1,6 @@
 {
 	"auto_upgrade": true,
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
