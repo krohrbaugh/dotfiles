@@ -1,8 +1,8 @@
 {
 	"extensions":
 	[
-		"svg",
 		"xml",
+		"svg",
 		"xml.dist",
 		"xslt",
 		"xsd"
