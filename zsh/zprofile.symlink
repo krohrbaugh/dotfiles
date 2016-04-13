@@ -1,0 +1,11 @@
+# File locations
+export PROJECTS=$HOME/Code
+export ZSH=$PROJECTS/my/dotfiles
+
+# Load path files
+config_files=($ZSH/**/path.zsh)
+
+for file in ${config_files}
+do
+  source $file
+done
