@@ -1,6 +1,6 @@
 # Editor settings
-#   Sublime: 'subl -w'
+#   Sublime: 'subl -nw'
 #   MacVim:  'mvim'
 #   Vim:     'vim'
-export EDITOR="subl -w"
-export GEM_EDITOR="subl -w"
+export EDITOR="subl -nw"
+export GEM_EDITOR="subl -nw"
