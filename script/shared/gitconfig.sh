@@ -1,10 +1,13 @@
 #!/bin/bash
 #
-# Generates gitconfig.symlink using gitconfig.template
-source "${DOTFILES_ROOT}/script/shared/common.sh"
+# Generates/deletes gitconfig.symlink using gitconfig.template
+source "${SCRIPT_ROOT}/shared/paths.sh"
+source "${SCRIPT_ROOT}/shared/common.sh"
+
+gitconfig_path="${DOTFILES_ROOT}/git/gitconfig.symlink"
 
 generate_gitconfig () {
-  if ! [ -f git/gitconfig.symlink ]; then
+  if ! [ -f "$gitconfig_path" ]; then
     info 'setup gitconfig'
 
     # Default to existing configuration when present
@@ -14,7 +17,6 @@ generate_gitconfig () {
       user ' - What is your git display name?'
       read -e GIT_NAME
     fi
-    info "GIT NAME: $GIT_NAME"
 
     if git config user.name &>/dev/null; then
       GIT_EMAIL="$(git config user.email)"
@@ -38,7 +40,13 @@ generate_gitconfig () {
 
     success 'generated gitconfig'
   else
-    info 'skipped gitconfig'
+    info "skipped gitconfig: $(gitconfig_path) exists"
     echo ''
+  fi
+}
+
+delete_gitconfig() {
+  if [ -f "$gitconfig_path" ]; then
+    remove_file $gitconfig_path
   fi
 }

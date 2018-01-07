@@ -1,21 +1,24 @@
 #!/bin/bash
 #
-# bootstrap installs things.
-set -e
+# Links/unlinks .symlink files as dot-files in $HOME
+source "${SCRIPT_ROOT}/shared/paths.sh"
+source "${SCRIPT_ROOT}/shared/common.sh"
 
-DOTFILES_ROOT="`pwd`"
-source "${DOTFILES_ROOT}/script/shared/common.sh"
-source "${DOTFILES_ROOT}/script/shared/generate_gitconfig.sh"
+get_dotfiles () {
+  find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink
+}
 
 install_dotfiles () {
   info 'installing dotfiles'
+
+  dotfiles=$(get_dotfiles)
 
   overwrite_all=false
   backup_all=false
   skip_all=false
   nuke_all=false
 
-  for source in `find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink`
+  for source in $dotfiles
   do
     dest="$HOME/.`basename \"${source%.*}\"`"
 
@@ -79,8 +82,15 @@ install_dotfiles () {
   done
 }
 
-echo ''
-generate_gitconfig
-install_dotfiles
-echo ''
-echo '  Installed!'
+uninstall_dotfiles () {
+  dotfiles=$(get_dotfiles)
+
+  for source in $dotfiles
+  do
+    dest="$HOME/.`basename \"${source%.*}\"`"
+    if [ -f $dest ] || [ -d $dest ]
+    then
+      remove_file $dest
+    fi
+  done
+}

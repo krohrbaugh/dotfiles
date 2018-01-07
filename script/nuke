@@ -1,14 +1,34 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
-# nuke dotfiles install with extreme prejudice (no confirmation)
-
-DOTFILES_ROOT="`pwd`"
-source "${DOTFILES_ROOT}/script/shared/common.sh"
-source "${DOTFILES_ROOT}/script/shared/uninstall.sh"
-
+# Remove dotfiles
 set -e
+set -o pipefail
+
+SCRIPT_ROOT=`dirname "$0"`
+source "${SCRIPT_ROOT}/shared/common.sh"
+source "${SCRIPT_ROOT}/shared/gitconfig.sh"
+source "${SCRIPT_ROOT}/shared/dotfiles.sh"
+source "${SCRIPT_ROOT}/shared/code_dir.sh"
+
+[ "$1" = "--complete" ] && nuke_complete=true
+
+nuke_confirmed=false
+confirm 'About to remove all dotfiles!' nuke_confirmed
 
 echo ''
-delete_all
+
+if [ "$nuke_confirmed" ==  "true" ]; then
+  uninstall_dotfiles
+  delete_gitconfig
+  
+  # Riskier things require the --complete flag to nuke
+  if [ "$nuke_complete" == "true" ]; then
+  	delete_code_dir
+  fi
+  
+  success 'Nuked'
+else
+  success 'Aborted'
+fi
+
 echo ''
-echo '  Nuked!'

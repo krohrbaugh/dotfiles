@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#
+# Setup dotfiles
+set -eu
+set -o pipefail
+
+SCRIPT_ROOT=`dirname "$0"`
+source "${SCRIPT_ROOT}/shared/common.sh"
+source "${SCRIPT_ROOT}/shared/gitconfig.sh"
+source "${SCRIPT_ROOT}/shared/dotfiles.sh"
+source "${SCRIPT_ROOT}/shared/code_dir.sh"
+
+echo ''
+
+generate_gitconfig
+install_dotfiles
+setup_code_dir
+
+echo ''
