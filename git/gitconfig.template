@@ -1,6 +1,6 @@
 [user]
-	name = AUTHORNAME
-	email = AUTHOREMAIL
+	name = GIT_NAME
+	email = GIT_EMAIL
 [alias]
 	co = checkout
 	st = status
@@ -41,6 +41,8 @@
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [format]
 	pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
+[github]
+	user = GITHUB_USER
 [help]
 	autocorrect = 1
 [http]
