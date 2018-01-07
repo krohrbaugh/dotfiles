@@ -1,0 +1,18 @@
+# Defines software to always install
+# 
+# See https://github.com/Homebrew/homebrew-bundle
+
+cask_args appdir: "/Applications"
+
+tap "caskroom/cask"
+
+# Pre-req's
+brew "mas" # Mac App Store CLI - https://github.com/mas-cli/mas
+
+# General
+mas "1Password", id: 443987910
+cask "google-chrome"
+
+# Development
+cask "sublime-text"
+
