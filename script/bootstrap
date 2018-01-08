@@ -10,3 +10,4 @@ SCRIPT_ROOT=`dirname "$0"`
 source "${SCRIPT_ROOT}/shared/settings.sh"
 
 install_dependencies
+install_fonts

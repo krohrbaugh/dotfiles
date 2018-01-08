@@ -7,4 +7,4 @@ set -o pipefail
 SCRIPT_ROOT=`dirname "$0"`
 source "${SCRIPT_ROOT}/shared/settings.sh"
 
-$SCRIPT_ROOT/bootstrap
+ $SCRIPT_ROOT/bootstrap

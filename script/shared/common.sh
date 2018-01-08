@@ -58,6 +58,11 @@ move_file () {
   success "moved $1 to $2"
 }
 
+copy_file () {
+  cp $1 $2
+  success "copied $(basename $1) to $2"
+}
+
 make_directory () {
   mkdir -p "$1"
   success "Created directory: $1"
