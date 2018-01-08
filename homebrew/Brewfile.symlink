@@ -14,13 +14,19 @@ cask "google-chrome"
 cask "firefox"
 cask "opera"
 
+# CLI
+brew "ack"
+brew "cloc"
+brew "the_silver_searcher"
+brew "tree"
+
 # Communication
 cask "dropbox"
 cask "teamviewer"
 mas "Slack", id: 803453959
 
 # Development
-cask "java" unless system "/usr/libexec/java_home --failfast"
+cask "java" unless system "/usr/libexec/java_home --failfast >/dev/null"
 cask "tower"
 
 # Editors
