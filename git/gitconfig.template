@@ -33,12 +33,8 @@
 	# editor = 'mvim -f --nomru -c "au VimLeave * !open -a iTerm"'
 [credential]
 	helper = osxkeychain
-[diff]
-	tool = Kaleidoscope
 [difftool]
 	prompt = false
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [format]
 	pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
 [github]
