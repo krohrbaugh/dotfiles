@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#
+# Installs dependencies
+#
+# NOTE: This should _not_ be run with Strap, since it bootstraps the Brewfile itself.
+set -e
+set -o pipefail
+
+SCRIPT_ROOT=`dirname "$0"`
+source "${SCRIPT_ROOT}/shared/settings.sh"
+
+install_dependencies

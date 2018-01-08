@@ -10,10 +10,6 @@ source "${SCRIPT_ROOT}/shared/gitconfig.sh"
 source "${SCRIPT_ROOT}/shared/dotfiles.sh"
 source "${SCRIPT_ROOT}/shared/code_dir.sh"
 
-echo ''
-
 generate_gitconfig
 install_dotfiles
 setup_code_dir
-
-echo ''

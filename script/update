@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# Update dependencies and settings
+set -e
+set -o pipefail
+
+SCRIPT_ROOT=`dirname "$0"`
+source "${SCRIPT_ROOT}/shared/settings.sh"
+
+$SCRIPT_ROOT/bootstrap

@@ -15,8 +15,6 @@ source "${SCRIPT_ROOT}/shared/code_dir.sh"
 nuke_confirmed=false
 confirm 'About to remove all dotfiles!' nuke_confirmed
 
-echo ''
-
 if [ "$nuke_confirmed" ==  "true" ]; then
   uninstall_dotfiles
   delete_gitconfig
@@ -25,10 +23,6 @@ if [ "$nuke_confirmed" ==  "true" ]; then
   if [ "$nuke_complete" == "true" ]; then
   	delete_code_dir
   fi
-  
-  success 'Nuked'
 else
   success 'Aborted'
 fi
-
-echo ''
