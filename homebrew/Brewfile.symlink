@@ -9,10 +9,35 @@ tap "caskroom/cask"
 # Pre-req's
 brew "mas" # Mac App Store CLI - https://github.com/mas-cli/mas
 
-# General
-mas "1Password", id: 443987910
+# Browsers
 cask "google-chrome"
+cask "firefox"
+cask "opera"
+
+# Communication
+cask "dropbox"
+cask "teamviewer"
+mas "Slack", id: 803453959
 
 # Development
-cask "sublime-text"
+cask "java" unless system "/usr/libexec/java_home --failfast"
+cask "tower"
 
+# Editors
+cask "sublime-text"
+cask "textmate"
+
+# Entertainment
+cask "spotify"
+cask "vlc"
+
+# Terminals
+cask "iterm2"
+
+# Utility
+cask "appcleaner"
+cask "karabiner"
+cask "spectacle"
+cask "transmit"
+mas "1Password", id: 443987910
+mas "Alfred", id: 405843582
