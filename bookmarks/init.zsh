@@ -20,7 +20,7 @@ typeset -A dir_bookmarks
 dir_bookmarks=()
 
 typeset -U bookmark_files
-bookmark_files=($ZSH/bookmarks/(.*|*))
+bookmark_files=($DOT_FILES/bookmarks/(.*|*))
 
 # Load bookmarks, excluding this init script
 for file in ${${bookmark_files:#*/init.zsh}}

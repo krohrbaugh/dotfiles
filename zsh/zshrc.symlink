@@ -1,9 +1,12 @@
 #
 # File locations
 #
-export PROJECTS=$HOME/Code
-export ZSH=$PROJECTS/my/dotfiles
-export DOT_FILES=$ZSH
+if [ -z ${DOT_FILES+x} ]; then
+  export DOT_FILES=$HOME/.dotfiles
+fi
+if [ -z ${PROJECTS+x} ]; then
+  export PROJECTS=$HOME/Code
+fi
 
 # Source local settings excluded from dotfiles repo
 if [[ -a $HOME/.localrc.before ]]
@@ -11,9 +14,9 @@ then
 	source $HOME/.localrc.before
 fi
 
-# Source ZSH files
+# Source ZSH files from dotfiles
 typeset -U config_files
-config_files=($ZSH/**/*.zsh)
+config_files=($DOT_FILES/**/*.zsh)
 
 # Load everything, excluding path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
@@ -23,7 +26,7 @@ done
 
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
-compinit
+compinit -u
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}

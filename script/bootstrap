@@ -11,3 +11,4 @@ source "${SCRIPT_ROOT}/shared/settings.sh"
 
 install_dependencies
 install_fonts
+set_default_shell

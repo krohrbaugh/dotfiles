@@ -19,6 +19,7 @@ brew "ack"
 brew "cloc"
 brew "the_silver_searcher"
 brew "tree"
+brew "zsh"
 
 # Communication
 cask "dropbox"

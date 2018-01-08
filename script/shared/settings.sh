@@ -12,6 +12,19 @@ install_dependencies () {
   fi
 }
 
+# CLI
+set_default_shell () {
+  # Set user shell to Homebrew-installed ZSH
+  local homebrew_zsh="/usr/local/bin/zsh"
+
+  if [ "$homebrew_zsh" != "$SHELL" ]; then
+    sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+	success 'set default shell to ZSH'
+  else
+    info 'default shell already ZSH\n'
+  fi
+}
+
 # Fonts
 get_fonts () {
   find $DOTFILES_ROOT/fonts -name \*.otf
@@ -49,3 +62,5 @@ remove_fonts () {
     fi
   done
 }
+
+

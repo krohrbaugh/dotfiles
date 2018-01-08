@@ -1,11 +1,17 @@
 # File locations
-export PROJECTS=$HOME/Code
-export ZSH=$PROJECTS/my/dotfiles
+if [ -z ${DOT_FILES+x} ]; then
+  export DOT_FILES=$HOME/.dotfiles
+fi
+if [ -z ${PROJECTS+x} ]; then
+  export PROJECTS=$HOME/Code
+fi
 
 # Load path files
-config_files=($ZSH/**/path.zsh)
+path_config_files=($DOT_FILES/**/path.zsh)
 
-for file in ${config_files}
+for file in ${path_config_files}
 do
   source $file
 done
+
+unset path_config_files

@@ -1,2 +1,2 @@
-dotfiles=$PROJECTS/personal/dotfiles
+dotfiles=$DOT_FILES
 boxen=$PROJECTS/personal/boxen
