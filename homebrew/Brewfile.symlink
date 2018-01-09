@@ -17,6 +17,7 @@ cask "opera"
 # CLI
 brew "ack"
 brew "cloc"
+brew "shellcheck"
 brew "the_silver_searcher"
 brew "tree"
 brew "zsh"

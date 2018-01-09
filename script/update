@@ -4,7 +4,8 @@
 set -e
 set -o pipefail
 
-SCRIPT_ROOT=`dirname "$0"`
+SCRIPT_ROOT=$(dirname "$0")
+# shellcheck source=script/shared/settings.sh
 source "${SCRIPT_ROOT}/shared/settings.sh"
 
- $SCRIPT_ROOT/bootstrap
+"$SCRIPT_ROOT/bootstrap"

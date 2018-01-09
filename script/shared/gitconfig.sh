@@ -1,12 +1,19 @@
 #!/bin/bash
 #
 # Generates/deletes gitconfig.symlink using gitconfig.template
+
+# shellcheck source=script/shared/paths.sh
 source "${SCRIPT_ROOT}/shared/paths.sh"
+# shellcheck source=script/shared/common.sh
 source "${SCRIPT_ROOT}/shared/common.sh"
 
-gitconfig_path="${DOTFILES_ROOT}/git/gitconfig.symlink"
+get_gitconfig_path () {
+  echo "$DOT_FILES/git/gitconfig.symlink"
+}
 
 generate_gitconfig () {
+  local -r gitconfig_path=$(get_gitconfig_path)
+
   if ! [ -f "$gitconfig_path" ]; then
     info 'setup gitconfig'
 
@@ -15,21 +22,21 @@ generate_gitconfig () {
       GIT_NAME="$(git config user.name)"
     else
       user ' - What is your git display name?'
-      read -e GIT_NAME
+      read -re GIT_NAME
     fi
 
     if git config user.name &>/dev/null; then
       GIT_EMAIL="$(git config user.email)"
     else
       user ' - What is your git email?'
-      read -e GIT_EMAIL
+      read -re GIT_EMAIL
     fi
     
     if git config github.user &>/dev/null; then
       GITHUB_USER="$(git config github.user)"
     else
       user ' - What is your Github username?'
-      read -e GITHUB_USER
+      read -re GITHUB_USER
     fi
 
     # Generate gitconfig from template
@@ -46,7 +53,9 @@ generate_gitconfig () {
 }
 
 delete_gitconfig() {
+  local -r gitconfig_path=$(get_gitconfig_path)
+
   if [ -f "$gitconfig_path" ]; then
-    remove_file $gitconfig_path
+    remove_file "$gitconfig_path"
   fi
 }

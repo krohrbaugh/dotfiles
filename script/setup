@@ -4,10 +4,14 @@
 set -eu
 set -o pipefail
 
-SCRIPT_ROOT=`dirname "$0"`
+SCRIPT_ROOT=$(dirname "$0")
+# shellcheck source=script/shared/common.sh
 source "${SCRIPT_ROOT}/shared/common.sh"
+# shellcheck source=script/shared/gitconfig.sh
 source "${SCRIPT_ROOT}/shared/gitconfig.sh"
+# shellcheck source=script/shared/dotfiles.sh
 source "${SCRIPT_ROOT}/shared/dotfiles.sh"
+# shellcheck source=script/shared/code_dir.sh
 source "${SCRIPT_ROOT}/shared/code_dir.sh"
 
 generate_gitconfig

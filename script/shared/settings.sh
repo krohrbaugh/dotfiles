@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 #
 # Manages settings for various applications
+
+# shellcheck source=script/shared/paths.sh
 source "${SCRIPT_ROOT}/shared/paths.sh"
+# shellcheck source=script/shared/common.sh
 source "${SCRIPT_ROOT}/shared/common.sh"
 
 # Applications and software (managed by homebrew-bundle, see homebrew/Brewfile.symlink)
@@ -18,7 +21,7 @@ set_default_shell () {
   local homebrew_zsh="/usr/local/bin/zsh"
 
   if [ "$homebrew_zsh" != "$SHELL" ]; then
-    sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+    "sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh"
 	success 'set default shell to ZSH'
   else
     info 'default shell already ZSH\n'
@@ -27,38 +30,38 @@ set_default_shell () {
 
 # Fonts
 get_fonts () {
-  find $DOTFILES_ROOT/fonts -name \*.otf
+  "find $DOT_FILES/fonts -name \\*.otf"
 }
 
 install_fonts () {
   info 'installing fonts . . .\n'
-  local fonts=$(get_fonts)
+  local -r fonts=$(get_fonts)
 
   for font in $fonts
   do
   	font_name=$(basename "${font%.*}")
   	dest="$HOME/Library/Fonts/$(basename "${font}")"
     
-    if ! [ -f $dest ]; then
-      copy_file $font $dest
+    if ! [ -f "$dest" ]; then
+      copy_file "$font" "$dest"
     else
-      info "skipped $font_name: already installed\n"
+      info "skipped $font_name: already installed\\n"
     fi
   done
 }
 
 remove_fonts () {
-  local fonts=$(get_fonts)
+  local -r fonts=$(get_fonts)
 
   for font in $fonts
   do
   	font_name=$(basename "${font%.*}")
   	dest="$HOME/Library/Fonts/$(basename "${font}")"
     
-    if [ -f $dest ]; then
-      remove_file $dest
+    if [ -f "$dest" ]; then
+      remove_file "$dest"
     else
-      info "skipped $font_name: already installed\n"
+      info "skipped $font_name: already installed\\n"
     fi
   done
 }

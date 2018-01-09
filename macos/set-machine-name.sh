@@ -7,11 +7,11 @@
 echo ''
 if [ -n "$hostname" ]
 then
-  echo "Setting hostname to $hostname; super-user password required."
+  osascript -e 'tell application "System Preferences" to quit'
 
-  # Request & keep-alive `sudo`
-  sudo -v
-  while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+  echo "Setting hostname to $hostname. Super-user password required:"
+
+  sudo -k
 
   # Set computer name (as done via System Preferences → Sharing)
   #   See: http://muppet.wikia.com/wiki/Sweetums

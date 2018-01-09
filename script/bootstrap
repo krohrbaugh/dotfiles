@@ -6,9 +6,15 @@
 set -e
 set -o pipefail
 
-SCRIPT_ROOT=`dirname "$0"`
+SCRIPT_ROOT=$(dirname "$0")
+# shellcheck source=script/shared/settings.sh
 source "${SCRIPT_ROOT}/shared/settings.sh"
 
 install_dependencies
 install_fonts
+
+# Terminal settings
 set_default_shell
+
+# MacOS settings
+"$DOT_FILES/macos/set-defaults.sh"
