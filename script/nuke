@@ -22,10 +22,10 @@ nuke_confirmed=false
 confirm 'About to remove all dotfiles!' nuke_confirmed
 
 if [ "$nuke_confirmed" =  "true" ]; then
-  # uninstall_dotfiles
-  # delete_gitconfig
+  uninstall_dotfiles
+  delete_gitconfig
   remove_terminal_settings
-  # remove_fonts
+  remove_fonts
   
   # Riskier things require the --complete flag to nuke
   if [ "$nuke_complete" == "true" ]; then
