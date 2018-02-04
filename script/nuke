@@ -13,15 +13,19 @@ source "${SCRIPT_ROOT}/shared/gitconfig.sh"
 source "${SCRIPT_ROOT}/shared/dotfiles.sh"
 # shellcheck source=script/shared/code_dir.sh
 source "${SCRIPT_ROOT}/shared/code_dir.sh"
+# shellcheck source=script/shared/settings.sh
+source "${SCRIPT_ROOT}/shared/settings.sh"
 
 [ "$1" = "--complete" ] && nuke_complete=true
 
 nuke_confirmed=false
 confirm 'About to remove all dotfiles!' nuke_confirmed
 
-if [ "$nuke_confirmed" ==  "true" ]; then
-  uninstall_dotfiles
-  delete_gitconfig
+if [ "$nuke_confirmed" =  "true" ]; then
+  # uninstall_dotfiles
+  # delete_gitconfig
+  remove_terminal_settings
+  # remove_fonts
   
   # Riskier things require the --complete flag to nuke
   if [ "$nuke_complete" == "true" ]; then
