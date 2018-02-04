@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# Configured Karabiner
+set -e
+set -o pipefail
+
+# shellcheck source=karabiner/karabiner.sh
+source "${DOT_FILES}/karabiner/karabiner.sh"
+
+karabiner_login_item
