@@ -35,7 +35,7 @@
       <appendix>F8 to Music Next</appendix>
       <appendix>Fn+F8 to F8</appendix>
       <autogen>__KeyToConsumer__ KeyCode::F6, ConsumerKeyCode::MUSIC_PREV</autogen>
-      <autogen>__KeyToKey__ KeyCode::F6, ModifierFlag::FN, KeyCode::F6</autogent>
+      <autogen>__KeyToKey__ KeyCode::F6, ModifierFlag::FN, KeyCode::F6</autogen>
       <autogen>__KeyToConsumer__ KeyCode::F7, ConsumerKeyCode::MUSIC_PLAY</autogen>
       <autogen>__KeyToKey__ KeyCode::F7, ModifierFlag::FN, KeyCode::F7</autogen>
       <autogen>__KeyToConsumer__ KeyCode::F8, ConsumerKeyCode::MUSIC_NEXT</autogen>

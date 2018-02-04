@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# Update Karabiner settings
+set -e
+set -o pipefail
+
+KARABINER_SCRIPT_ROOT=$(dirname "$0")
+
+"$KARABINER_SCRIPT_ROOT/bootstrap"

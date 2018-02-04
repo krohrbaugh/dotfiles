@@ -7,4 +7,9 @@ set -o pipefail
 # shellcheck source=karabiner/karabiner.sh
 source "${DOT_FILES}/karabiner/karabiner.sh"
 
+karabiner_private_xml
 karabiner_login_item
+karabiner_launch
+karabiner_enable_mappings
+
+

@@ -44,3 +44,41 @@ karabiner_login_item_rm () {
   	warn "$KARABINER_NAME login item not found"
   fi
 }
+
+karabiner_private_xml () {
+  local xml_src="$DOT_FILES/karabiner/key_remap.xml"
+  make_directory "$KARABINER_XML_DIR"
+  copy_file "$xml_src" "$KARABINER_XML_PATH"
+}
+
+karabiner_private_xml_rm () {
+  remove_file "$KARABINER_XML_PATH"
+}
+
+karabiner_get_mappings () {
+  xmlstarlet sel -t -v '//identifier' "$KARABINER_XML_PATH"
+}
+
+karabiner_enable_mappings () {
+  local action=$1
+  local -r mappings=$(xmlstarlet sel -t -v '//identifier' "$KARABINER_XML_PATH")
+  for mapping in $mappings
+  do
+    $($KARABINER_CLI enable $mapping)
+    if [ $($KARABINER_CLI changed | grep "$mapping=1") ]; then
+      success "Karabiner $mapping enabled"
+    else
+      warn "Karabiner $mapping failed to enable"
+    fi
+  done
+  $($KARABINER_CLI relaunch)
+}
+
+karabiner_launch () {
+	/usr/bin/open "$KARABINER_APP"
+	$($KARABINER_CLI reloadxml)
+}
+
+karabiner_quit () {
+	osascript -e "quit app \"$KARABINER_APP\""
+}
