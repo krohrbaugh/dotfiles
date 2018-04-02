@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# Setup Sublime Text 3 settings
+set -euo pipefail
+
+# shellcheck source=sublime3/sublime3.sh
+source "$DOT_FILES/sublime3/sublime3.sh"
+
+sublime3

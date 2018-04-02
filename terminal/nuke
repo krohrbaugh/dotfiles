@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # Configure terminal apps
-set -e
+set -eu
 set -o pipefail
 
 # shellcheck source=terminal/terminal.sh

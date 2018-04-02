@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
-# Configure terminal apps
-set -e
+# Update Sublime Text 3 settings
+set -eu
 set -o pipefail
 
 echo "Nothing to update. Run setup for initial setup"

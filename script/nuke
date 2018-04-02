@@ -28,6 +28,12 @@ fi
 source "$DOT_FILES/terminal/nuke"
 
 #
+# Nuke Sublime Text 3 preferences
+#
+# shellcheck source=sublime3/nuke
+source "$DOT_FILES/sublime3/nuke"
+
+#
 # Nuke prerequisites (reverses 'bootstrap')
 #
 if [ "$nuke_complete" = "true" ]; then

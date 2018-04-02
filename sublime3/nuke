@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# Nuke Sublime Text 3 settings
+set -eu
+set -o pipefail
+
+# shellcheck source=sublime3/sublime3.sh
+source "$DOT_FILES/sublime3/sublime3.sh"
+
+sublime3_rm
