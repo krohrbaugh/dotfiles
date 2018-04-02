@@ -1,5 +1,8 @@
+# macOS 10.13.x
+alias flushdns="sudo killall -HUP mDNSResponder && echo macOS DNS Cache Reset"
+
 # OS X 10.10.4
-alias flushdns="dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+# alias flushdns="dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
 # OS X 10.10
 #alias flushdns="sudo discoveryutil udnsflushcaches"
