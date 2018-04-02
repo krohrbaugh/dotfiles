@@ -13,7 +13,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Disable suspend when plugged in
-sudo pmset autopoweroff 0
+sudo pmset autopoweroff 0	
 
 ###############################################################################
 # General UI/UX                                                               #

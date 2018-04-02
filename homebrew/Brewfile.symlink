@@ -45,7 +45,8 @@ cask "iterm2"
 
 # Utility
 cask "appcleaner"
-cask "karabiner"
+cask "istat-menus"
+cask "karabiner-elements"
 cask "spectacle"
 cask "transmit"
 mas "1Password", id: 443987910

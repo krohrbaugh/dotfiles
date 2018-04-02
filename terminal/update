@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#
+# Configure terminal apps
+set -e
+set -o pipefail
+
+echo "Nothing to update. Run setup for initial setup"

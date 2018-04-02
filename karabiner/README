@@ -1,0 +1,3 @@
+NOTE: Needs updating for karabiner-elements!
+
+This will likely require generating a new JSON file and symlinking this directory to ~/.config/karabiner - see https://pqrs.org/osx/karabiner/document.html#configuration-file-path

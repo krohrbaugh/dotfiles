@@ -5,7 +5,12 @@ set -e
 set -o pipefail
 
 SCRIPT_ROOT=$(dirname "$0")
-# shellcheck source=script/shared/settings.sh
-source "${SCRIPT_ROOT}/shared/settings.sh"
 
-"$SCRIPT_ROOT/bootstrap"
+#
+# Software
+#
+# shellcheck source=script/shared/software.sh
+source "$SCRIPT_ROOT/shared/software.sh"
+homebrew_bundle
+
+successn "updated"

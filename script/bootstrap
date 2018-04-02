@@ -7,12 +7,12 @@ set -e
 set -o pipefail
 
 SCRIPT_ROOT=$(dirname "$0")
-# shellcheck source=script/shared/settings.sh
-source "${SCRIPT_ROOT}/shared/settings.sh"
+# shellcheck source=script/shared/prerequisites.sh
+source "$SCRIPT_ROOT/shared/prerequisites.sh"
+# shellcheck source=script/shared/software.sh
+source "$SCRIPT_ROOT/shared/software.sh"
 
-install_dependencies
-install_fonts
-
-# Terminal settings
-set_default_shell
-set_terminal_settings
+gitconfig
+dotfiles
+fonts
+homebrew_bundle

@@ -1,6 +1,7 @@
-autoload colors && colors
-# cheers, @ehrenmurdick
-# http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
+#
+# Prompt configuration
+#
+# NOTE: Requires colors built-in to be loaded.
 
 if (( $+commands[git] ))
 then

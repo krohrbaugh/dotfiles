@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#
+# Configure terminal apps
+set -e
+set -o pipefail
+
+# shellcheck source=terminal/terminal.sh
+source "$DOT_FILES/terminal/terminal.sh"
+
+shell_bash
+terminal_preferences_rm
