@@ -21,6 +21,7 @@ shell_preference () {
 shell_zsh () {
   # Set user shell to Homebrew-installed ZSH
   shell_preference "/usr/local/bin/zsh"
+  make_directory ~/.zsh
 }
 
 shell_bash () {
