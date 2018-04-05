@@ -11,9 +11,8 @@ source "$SCRIPT_ROOT/shared/paths.sh"
 #
 # Software
 #
-# shellcheck source=script/shared/software.sh
-source "$SCRIPT_ROOT/shared/software.sh"
-homebrew_bundle
+# shellcheck source=homebrew/setup
+source "$DOT_FILES/homebrew/setup"
 
 #
 # Terminal and shell preferences

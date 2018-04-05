@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#
+# Install software via homebrew
+set -euo pipefail
+
+# shellcheck source=homebrew/setup
+source "$DOT_FILES/homebrew/setup"

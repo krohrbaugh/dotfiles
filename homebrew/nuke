@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# Install software via homebrew
+set -euo pipefail
+
+# shellcheck source=script/shared/common.sh
+source "$DOT_FILES/script/shared/common.sh"
+
+warnn "Nope. Refer to Homebrew uninstall directions: https://docs.brew.sh/FAQ"
