@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+#
+# Source: https://github.com/roubles/maclock
+
+printusage () {
+    echo "Usage: maclock [-m] [-d] [-q] [-a]"
+    echo ""
+    echo "       -m, --mute    : mute the audio"
+    echo "       -d, --display : sleep the display"
+    echo "       -q, --quiet   : no output"
+    echo "       -a, --all     : --mute and --display"
+}
+
+ALL=false
+SLEEP_DISPLAY=false
+MUTE=false
+QUIET=false
+
+for i in "$@"
+do
+    case $i in
+        --help|-h)
+            printusage
+            exit 1
+            ;;
+        --all|-a)
+            ALL=true
+            shift
+            ;;
+        --display|-d)
+            SLEEP_DISPLAY=true
+            shift
+            ;;
+        --mute|-m)
+            MUTE=true
+            shift
+            ;;
+        --quiet|-q)
+            QUIET=true
+            shift
+            ;;
+        *)
+            printusage
+            exit 1
+            ;;
+    esac
+done
+
+# Launch screensaver
+open -a ScreenSaverEngine
+
+# Mute the audio
+if [[ $ALL = true ]] || [[ $MUTE = true ]] ; then
+    if [[ $QUIET = false ]]; then
+        echo "Muting..."
+    fi
+    osascript -e "set Volume 0"
+    if [[ $QUIET = false ]]; then
+        osascript -e "get volume settings"
+    fi
+fi
+
+# Sleep the display
+if [[ $ALL = true ]] || [[ $SLEEP_DISPLAY = true ]] ; then
+    if [[ $QUIET = false ]]; then
+        echo "Display sleep..."
+    fi
+    pmset displaysleepnow
+fi
