@@ -38,7 +38,7 @@ terminal settings, run `terminal/nuke`.
 ### macOS Preferences
 
 On a fresh macOS install, you may also wish to set some
-[sensible system preferences][0]:
+[sensible system preferences][mathiasbynens]:
 
 ``` sh
 ~dotfiles
