@@ -2,6 +2,7 @@
 # Prompt configuration
 #
 # NOTE: Requires colors built-in to be loaded.
+autoload -Uz colors; colors
 
 if (( $+commands[git] ))
 then

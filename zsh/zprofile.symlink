@@ -6,12 +6,6 @@ if [ -z ${PROJECTS+x} ]; then
   export PROJECTS=$HOME/Code
 fi
 
-zstyle :compinstall filename '~/.zprofile'
-
-# Autoload built-ins before fpath is expanded
-autoload -Uz colors; colors
-autoload -Uz compinit; compinit -u
-
 # Load path files
 path_config_files=($DOT_FILES/**/path.zsh)
 

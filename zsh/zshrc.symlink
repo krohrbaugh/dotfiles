@@ -24,6 +24,10 @@ do
   source $file
 done
 
+# Initialize completion
+zstyle :compinstall filename '~/.zshrc'
+autoload -Uz compinit; compinit -u
+
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
