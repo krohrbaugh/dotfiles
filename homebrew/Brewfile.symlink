@@ -33,6 +33,8 @@ mas "Slack", id: 803453959
 # Development
 cask "java" unless system "/usr/libexec/java_home --failfast >/dev/null"
 cask "tower"
+brew "chruby"
+brew "ruby-install"
 
 # Editors
 cask "sublime-text"
