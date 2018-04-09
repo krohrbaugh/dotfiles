@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# Nuke Ruby environment
+set -euo pipefail
+
+# shellcheck source=ruby/ruby.sh
+source "$DOT_FILES/ruby/ruby.sh"
+
+ruby_environment_rm

@@ -9,8 +9,11 @@ SCRIPT_ROOT=$(dirname "$0")
 #
 # Software
 #
-# shellcheck source=script/shared/software.sh
-source "$SCRIPT_ROOT/shared/software.sh"
-homebrew_bundle
+# shellcheck source=homebrew/setup
+source "$DOT_FILES/homebrew/update"
 
-successn "updated"
+#
+# Ruby environment
+#
+# shellcheck source=ruby/update
+source "$DOT_FILES/ruby/update"
