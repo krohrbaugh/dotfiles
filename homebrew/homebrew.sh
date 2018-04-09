@@ -8,6 +8,6 @@ source "$DOT_FILES/script/shared/paths.sh"
 source "$DOT_FILES/script/shared/common.sh"
 
 homebrew_bundle () {
-  info 'checking Brewfile . . . '
+  info 'Checking Brewfile . . . '
   brew bundle check --global || brew bundle --global
 }

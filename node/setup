@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#
+# Setup node environment
+set -euo pipefail
+
+# shellcheck source=node/update
+source "$DOT_FILES/node/update"
