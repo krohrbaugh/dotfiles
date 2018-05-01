@@ -26,6 +26,7 @@ brew "xmlstarlet"
 brew "zsh"
 
 # Communication
+mas "Annotate", id: 918207447
 cask "dropbox"
 cask "teamviewer"
 mas "Slack", id: 803453959
