@@ -16,6 +16,7 @@ cask "opera"
 
 # CLI
 brew "ack"
+brew "bfg"
 brew "cloc"
 brew "coreutils"
 brew "grc"
