@@ -17,6 +17,7 @@ tmtags
 tags
 .tags
 .gemtags
+oscrypto-ca-bundle.crt
 
 # ruby cruft
 .rvmrc
