@@ -6,13 +6,12 @@
 set -e
 set -o pipefail
 
-SCRIPT_ROOT=$(dirname "$0")
+DOT_FILES=$(git rev-parse --show-toplevel)
+SCRIPT_ROOT="$DOT_FILES/script"
+
 # shellcheck source=script/shared/prerequisites.sh
 source "$SCRIPT_ROOT/shared/prerequisites.sh"
-# shellcheck source=script/shared/software.sh
-source "$SCRIPT_ROOT/shared/software.sh"
 
 gitconfig
 dotfiles
 fonts
-homebrew_bundle

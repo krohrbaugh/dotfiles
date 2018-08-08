@@ -30,14 +30,14 @@ dotfiles () {
 
   local -r dotfiles=$(dotfiles_ls)
 
-  local overwrite_all=false
+  local overwrite_all=true
   local backup_all=false
   local skip_all=false
   local nuke_all=false
 
   for source in $dotfiles
   do
-    dest="$HOME/.$(basename \""${source%.*}"\")"
+    dest="$HOME/.$(basename ${source%.*})"
 
     if [ -f "$dest" ] || [ -d "$dest" ]; then
       overwrite=false
@@ -98,7 +98,7 @@ dotfiles_rm () {
 
   for source in $dotfiles
   do
-    local dest="$HOME/.$(basename \""${source%.*}"\")"
+    local dest="$HOME/.$(basename ${source%.*})"
     if [ -f "$dest" ] || [ -d "$dest" ]; then
       remove_file "$dest"
     fi
@@ -109,7 +109,7 @@ dotfiles_rm () {
 # Fonts
 #
 fonts_ls () {
-  find "FILES_ROOT/fonts" -name '*.otf'
+  find "$FILES_ROOT/fonts" -name '*.otf'
 }
 
 fonts () {

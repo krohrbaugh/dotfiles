@@ -4,13 +4,27 @@
 set -e
 set -o pipefail
 
-SCRIPT_ROOT=$(dirname "$0")
+if [ -z ${DOT_FILES+x} ]; then
+  DOT_FILES="$(git rev-parse --show-toplevel)"
+fi
 
 #
 # Software
 #
 # shellcheck source=homebrew/setup
 source "$DOT_FILES/homebrew/update"
+
+#
+# Terminal and shell preferences
+#
+# shellcheck source=terminal/setup
+source "$DOT_FILES/terminal/setup"
+
+#
+# Sublime Text 3 preferences
+#
+# shellcheck source=sublime3/setup
+source "$DOT_FILES/sublime3/setup"
 
 #
 # Ruby environment

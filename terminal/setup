@@ -4,6 +4,10 @@
 set -e
 set -o pipefail
 
+if [ -z ${DOT_FILES+x} ]; then
+  DOT_FILES="$(git rev-parse --show-toplevel)"
+fi
+
 # shellcheck source=terminal/terminal.sh
 source "$DOT_FILES/terminal/terminal.sh"
 
