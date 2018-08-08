@@ -9,12 +9,6 @@ SCRIPT_ROOT=$(dirname "$0")
 source "$SCRIPT_ROOT/shared/paths.sh"
 
 #
-# Software
-#
-# shellcheck source=homebrew/setup
-source "$DOT_FILES/homebrew/setup"
-
-#
 # Terminal and shell preferences
 #
 # shellcheck source=terminal/setup
