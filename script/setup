@@ -18,16 +18,16 @@ source "$DOT_FILES/terminal/setup"
 # Sublime Text 3 preferences
 #
 # shellcheck source=sublime3/setup
-source "$DOT_FILES/sublime3/setup"
+# source "$DOT_FILES/sublime3/setup"
 
 #
 # Ruby environment
 #
 # shellcheck source=ruby/setup
-source "$DOT_FILES/ruby/setup"
+# source "$DOT_FILES/ruby/setup"
 
 #
 # Node environment
 #
 # shellcheck source=node/setup
-source "$DOT_FILES/node/setup"
+# source "$DOT_FILES/node/setup"
