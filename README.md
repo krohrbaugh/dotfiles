@@ -42,14 +42,14 @@ On a fresh macOS install, you may also wish to set some
 
 ``` sh
 ~dotfiles
-./osx/set-defaults.sh
+./macos/set-defaults.sh
 ```
 
 To set your Mac's machine name:
 
 ``` sh
 ~dotfiles
-hostname=my_hostname ./osx/set-machine-name.sh
+hostname=my_hostname ./macos/set-machine-name.sh
 ```
 
 ### Sublime Text 3
