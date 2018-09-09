@@ -36,6 +36,9 @@ mas "Slack", id: 803453959
 cask "tower"
 cask "visual-studio-code"
 
+## Elixir
+brew "elixir"
+
 ## Node
 brew "node"
 brew "nvm"
