@@ -62,10 +62,10 @@ cask "vlc"
 cask "iterm2"
 
 # Utility
+cask "alfred"
 cask "appcleaner"
 cask "istat-menus"
 cask "karabiner-elements"
 cask "spectacle"
 cask "transmit"
 mas "1Password", id: 443987910
-mas "Alfred", id: 405843582
