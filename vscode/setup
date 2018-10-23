@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# Setup VSCode settings
+set -euo pipefail
+
+# shellcheck source=vscode/vscode.sh
+source "$DOT_FILES/vscode/vscode.sh"
+
+vscode

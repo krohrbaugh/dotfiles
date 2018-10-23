@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# Dump extensions list to `vscode/extensions`
+set -eu
+set -o pipefail
+
+extensions="$DOT_FILES/vscode/extensions"
+
+code --list-extensions > "$extensions"
+echo "Extensions list written to $extensions."

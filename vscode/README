@@ -1,0 +1,15 @@
+# VSCode settings
+
+## User settings
+
+_After_ intalling VSCode using `homebrew`, run `vscode/setup` to install user
+settings.
+
+## Extensions
+
+_After_ installing VSCode using `homebrew`, run `vscode/update` to install
+extensions. The extensions that will be installed are listed in `vscode/extensions`.
+
+To update the list of extensions in that file (after installing a new extension from
+within VSCode itself) run `vscode/dump-extensions` and then commit the modified
+`vscode/extensions` file.

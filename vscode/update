@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#
+# Update VSCode settings
+set -eu
+set -o pipefail
+
+extensions_file="$DOT_FILES/vscode/extensions"
+extension_list=$(cat "$extensions_file")
+
+for extension in $extension_list; do
+  code --install-extension "$extension"
+done
