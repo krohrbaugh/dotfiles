@@ -27,6 +27,12 @@ source "$DOT_FILES/terminal/setup"
 source "$DOT_FILES/sublime3/setup"
 
 #
+# VSCode preferences
+#
+# shellcheck source=vscode/setup
+source "$DOT_FILES/vscode/setup"
+
+#
 # Ruby environment
 #
 # shellcheck source=ruby/update
