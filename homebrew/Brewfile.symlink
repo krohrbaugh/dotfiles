@@ -5,6 +5,7 @@
 cask_args appdir: "/Applications"
 
 tap "caskroom/cask"
+tap "caskroom/versions"
 
 # Pre-req's
 brew "mas" # Mac App Store CLI - https://github.com/mas-cli/mas
@@ -45,7 +46,9 @@ brew "node"
 brew "nvm"
 
 ## Java
-cask "java" unless system "/usr/libexec/java_home --failfast >/dev/null"
+brew "jenv"
+cask "java"
+cask "java8"
 
 ## Ruby
 brew "chruby"
