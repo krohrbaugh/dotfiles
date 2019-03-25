@@ -2,16 +2,25 @@
 #
 # Installs dependencies
 #
-# NOTE: This should _not_ be run with Strap, since it bootstraps the Brewfile itself.
+# NOTE: Actually does nothing, since Strap is used to install dependencies.
 set -e
 set -o pipefail
 
 DOT_FILES=$(git rev-parse --show-toplevel)
 SCRIPT_ROOT="$DOT_FILES/script"
 
-# shellcheck source=script/shared/prerequisites.sh
-source "$SCRIPT_ROOT/shared/prerequisites.sh"
+# shellcheck source=script/shared/common.sh
+source "$SCRIPT_ROOT/shared/common.sh"
 
-gitconfig
-dotfiles
-fonts
+prompt="Dependencies are installed by Strap. Opening webpage to generate \`strap.sh\`."
+url="https://strap.githubapp.com/"
+open_url=false
+
+confirm "$prompt" open_url
+if [ "$open_url" = "true" ]; then
+  open "$url"
+  echo ''
+else
+  echo ''
+  infon "Cancelled"
+fi

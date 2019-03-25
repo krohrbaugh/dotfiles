@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
 #
-# Setup dotfiles
-set -eu
+# Setup initial state.
+#
+# NOTE: This is invoked by Strap, after pre-requisites are setup (e.g., Homebrew.)
+set -e
 set -o pipefail
 
-SCRIPT_ROOT=$(dirname "$0")
-# shellcheck source=script/bootstrap
-source "$SCRIPT_ROOT/bootstrap"
+DOT_FILES=$(git rev-parse --show-toplevel)
+SCRIPT_ROOT="$DOT_FILES/script"
+
+# shellcheck source=script/shared/prerequisites.sh
+source "$SCRIPT_ROOT/shared/prerequisites.sh"
+
+gitconfig
+dotfiles
+fonts
