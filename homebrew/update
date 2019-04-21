@@ -1,7 +1,17 @@
 #!/usr/bin/env bash
 #
-# Install software via homebrew
-set -euo pipefail
+# Update software via homebrew
+set -eo pipefail
 
-# shellcheck source=homebrew/setup
-source "$DOT_FILES/homebrew/setup"
+# shellcheck source=homebrew/homebrew.sh
+source "$DOT_FILES/homebrew/homebrew.sh"
+
+# The '--complete' arg also upgrades outdated packages
+update_complete=false
+[ "$1" = "--complete" ] && update_complete=true
+
+homebrew_bundle
+
+if [ "$update_complete" = "true" ]; then
+  homebrew_upgrade
+fi

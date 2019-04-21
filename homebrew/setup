@@ -6,4 +6,5 @@ set -euo pipefail
 # shellcheck source=homebrew/homebrew.sh
 source "$DOT_FILES/homebrew/homebrew.sh"
 
-homebrew_bundle
+homebrew_update
+homebrew_info
