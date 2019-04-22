@@ -6,4 +6,4 @@ set -euo pipefail
 # shellcheck source=node/node.sh
 source "$DOT_FILES/node/node.sh"
 
-node_environment
+node_update

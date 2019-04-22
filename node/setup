@@ -3,5 +3,7 @@
 # Setup node environment
 set -euo pipefail
 
-# shellcheck source=node/update
-source "$DOT_FILES/node/update"
+# shellcheck source=node/node.sh
+source "$DOT_FILES/node/node.sh"
+
+node_environment

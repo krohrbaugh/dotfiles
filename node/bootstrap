@@ -3,6 +3,6 @@
 # Installs ruby tooling dependencies
 set -euo pipefail
 
-# Install chruby and ruby-install via Homebrew
+# Install node and nvm via Homebrew
 # shellcheck source=homebrew/update
 source "$DOT_FILES/homebrew/update"

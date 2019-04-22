@@ -18,3 +18,9 @@ node_environment () {
 node_environment_rm () {
   remove_directory "$NVM_DIR"
 }
+
+node_update () {
+  # shellcheck source=node/nvm.zsh
+  source "$DOT_FILES/node/nvm.zsh"
+  nvm install node
+}
