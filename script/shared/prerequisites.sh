@@ -37,7 +37,7 @@ dotfiles () {
 
   for source in $dotfiles
   do
-    dest="$HOME/.$(basename ${source%.*})"
+    dest="$HOME/.$(basename "${source%.*}")"
 
     if [ -f "$dest" ] || [ -d "$dest" ]; then
       overwrite=false
@@ -98,7 +98,8 @@ dotfiles_rm () {
 
   for source in $dotfiles
   do
-    local dest="$HOME/.$(basename ${source%.*})"
+    local dest
+    dest="$HOME/.$(basename "${source%.*}")"
     if [ -f "$dest" ] || [ -d "$dest" ]; then
       remove_file "$dest"
     fi
@@ -188,5 +189,5 @@ gitconfig () {
 }
 
 gitconfig_rm() {
-  remove_file $(gitconfig_path)
+  remove_file "$(gitconfig_path)"
 }
