@@ -19,7 +19,7 @@ sublime3_environment () {
 }
 
 sublime3_environment_rm () {
-  if [ -L "$sl3_backup_dir" ]; then
+  if [ -d "$sl3_backup_dir" ]; then
     remove_file "$sl3_user_dir"
     move_directory "$sl3_backup_dir" "$sl3_user_dir"
   fi
