@@ -12,6 +12,7 @@ SCRIPT_ROOT="$DOT_FILES/script"
 # shellcheck source=script/shared/prerequisites.sh
 source "$SCRIPT_ROOT/shared/prerequisites.sh"
 
+code_dir
 gitconfig
 dotfiles
 fonts
