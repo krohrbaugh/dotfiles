@@ -12,4 +12,4 @@ fi
 source "$DOT_FILES/terminal/terminal.sh"
 
 shell_zsh
-terminal_preferences
+terminal_environment

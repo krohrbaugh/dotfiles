@@ -15,3 +15,15 @@ source "$SCRIPT_ROOT/shared/prerequisites.sh"
 gitconfig
 dotfiles
 fonts
+
+#
+# Terminal and shell environment setup
+#
+# shellcheck source=terminal/setup
+source "$DOT_FILES/terminal/setup"
+
+#
+# Sublime Text 3 environment setup 
+#
+# shellcheck source=sublime3/setup
+source "$DOT_FILES/sublime3/setup"

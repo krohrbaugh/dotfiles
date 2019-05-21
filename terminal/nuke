@@ -8,4 +8,4 @@ set -o pipefail
 source "$DOT_FILES/terminal/terminal.sh"
 
 shell_bash
-terminal_preferences_rm
+terminal_environment_rm

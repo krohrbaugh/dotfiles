@@ -11,20 +11,8 @@ fi
 #
 # Software
 #
-# shellcheck source=homebrew/setup
+# shellcheck source=homebrew/update
 source "$DOT_FILES/homebrew/update"
-
-#
-# Terminal and shell preferences
-#
-# shellcheck source=terminal/setup
-source "$DOT_FILES/terminal/setup"
-
-#
-# Sublime Text 3 preferences
-#
-# shellcheck source=sublime3/setup
-source "$DOT_FILES/sublime3/setup"
 
 #
 # VSCode preferences
