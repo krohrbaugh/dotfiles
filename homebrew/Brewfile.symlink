@@ -55,6 +55,10 @@ cask "java8"
 brew "chruby"
 brew "ruby-install"
 
+## Python
+brew "pyenv"
+brew "pipenv"
+
 # Editors
 cask "sublime-text"
 cask "textmate"
