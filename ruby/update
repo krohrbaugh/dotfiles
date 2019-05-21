@@ -6,4 +6,4 @@ set -euo pipefail
 # shellcheck source=ruby/ruby.sh
 source "$DOT_FILES/ruby/ruby.sh"
 
-ruby_environment
+ruby_update
