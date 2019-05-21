@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Nuke Node environment
+# Nuke node environment
 set -euo pipefail
 
 # shellcheck source=node/node.sh
