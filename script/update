@@ -15,12 +15,6 @@ fi
 source "$DOT_FILES/homebrew/update"
 
 #
-# VSCode preferences
-#
-# shellcheck source=vscode/setup
-source "$DOT_FILES/vscode/setup"
-
-#
 # Ruby environment
 #
 # shellcheck source=ruby/update

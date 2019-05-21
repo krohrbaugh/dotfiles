@@ -6,4 +6,4 @@ set -euo pipefail
 # shellcheck source=vscode/vscode.sh
 source "$DOT_FILES/vscode/vscode.sh"
 
-vscode
+vscode_environment

@@ -11,15 +11,15 @@ vscode_user_dir="$HOME/Library/Application Support/Code/User"
 vscode_backup_dir="$HOME/Library/Application Support/Code/User.bak"
 vscode_dotfiles_dir="$DOT_FILES/vscode/User"
 
-vscode () {
+vscode_environment () {
   if ! [ -L "$vscode_user_dir" ]; then
     move_directory "$vscode_user_dir" "$vscode_backup_dir"
     link_directory "$vscode_dotfiles_dir" "$vscode_user_dir"
   fi
 }
 
-vscode_rm () {
-  if [ -L "$vscode_backup_dir" ]; then
+vscode_environment_rm () {
+  if [ -d "$vscode_backup_dir" ]; then
     remove_file "$vscode_user_dir"
     move_directory "$vscode_backup_dir" "$vscode_user_dir"
   fi

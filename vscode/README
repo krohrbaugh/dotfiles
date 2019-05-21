@@ -2,8 +2,10 @@
 
 ## User settings
 
-_After_ intalling VSCode using `homebrew`, run `vscode/setup` to install user
-settings.
+Run `vscode/setup` to install user settings.
+
+_Note:_ This is invoked from `script/setup` and runs fine before or after VSCode is
+installed by Homebrew.
 
 ## Extensions
 

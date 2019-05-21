@@ -28,3 +28,9 @@ source "$DOT_FILES/terminal/setup"
 #
 # shellcheck source=sublime3/setup
 source "$DOT_FILES/sublime3/setup"
+
+#
+# VSCode environment setup
+#
+# shellcheck source=vscode/setup
+source "$DOT_FILES/vscode/setup"

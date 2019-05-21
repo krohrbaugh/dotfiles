@@ -7,4 +7,4 @@ set -o pipefail
 # shellcheck source=vscode/vscode.sh
 source "$DOT_FILES/vscode/vscode.sh"
 
-vscode_rm
+vscode_environment_rm
