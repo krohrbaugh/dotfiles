@@ -4,4 +4,4 @@
 set -eu
 set -o pipefail
 
-echo "Nothing to update. Run setup for initial setup"
+echo "Nothing to update. Run Sublime Text to update: subl"

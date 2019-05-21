@@ -6,4 +6,4 @@ set -euo pipefail
 # shellcheck source=sublime3/sublime3.sh
 source "$DOT_FILES/sublime3/sublime3.sh"
 
-sublime3
+sublime3_environment

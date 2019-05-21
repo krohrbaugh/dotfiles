@@ -11,14 +11,14 @@ sl3_user_dir="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
 sl3_backup_dir="$HOME/Library/Application Support/Sublime Text 3/Packages/User.bak"
 sl3_dotfiles_dir="$DOT_FILES/sublime3/User"
 
-sublime3 () {
+sublime3_environment () {
   if ! [ -L "$sl3_user_dir" ]; then
     move_directory "$sl3_user_dir" "$sl3_backup_dir"
     link_directory "$sl3_dotfiles_dir" "$sl3_user_dir"
   fi
 }
 
-sublime3_rm () {
+sublime3_environment_rm () {
   if [ -L "$sl3_backup_dir" ]; then
     remove_file "$sl3_user_dir"
     move_directory "$sl3_backup_dir" "$sl3_user_dir"
