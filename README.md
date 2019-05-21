@@ -21,9 +21,8 @@ To do that, visit [strap.githubapp.com][strap].
 
 The project is organized using the [scripts-to-rule-them-all][scripts] structure.
 
-* `script/bootstrap`: setup dependencies (Use [Strap][strap] as outlined above
-for clean installs.)
-* `script/setup`: setup initial state
+* `script/bootstrap`: setup dependencies (Uses [Strap][strap] as outlined above.)
+* `script/setup`: setup initial state (e.g., directories, etc.)
 * `script/update`: update to current state/commit
 * `script/nuke`: uninstall dotfiles
 
@@ -55,6 +54,10 @@ hostname=my_hostname ./macos/set-machine-name.sh
 ### Sublime Text 3
 
 See the README file in the `sublime3` directory for details.
+
+### VSCode
+
+See the README file in the `vscode` directory for details.
 
 ## Credits
 
