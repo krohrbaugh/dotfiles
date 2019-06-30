@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#
+# Nuke asdf plugins
+#
+# NOTE: To remove asdf itself, use homebrew
+set -euo pipefail
+
+# shellcheck source=asdf/asdf.sh
+source "$DOT_FILES/asdf/asdf.sh"
+
+if type asdf &>/dev/null; then
+  asdf_nuke
+else
+  warnn "Could not find asdf."
+fi

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#
+# Update asdf plugins
+#
+# NOTE: To update asdf itself, run `homebrew/update`
+set -euo pipefail
+
+# shellcheck source=asdf/asdf.sh
+source "$DOT_FILES/asdf/asdf.sh"
+
+if type asdf &>/dev/null; then
+  asdf_update
+else
+  warnn "Could not find asdf."
+fi

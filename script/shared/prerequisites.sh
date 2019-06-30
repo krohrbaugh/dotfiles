@@ -35,6 +35,9 @@ dotfiles () {
   local skip_all=false
   local nuke_all=false
 
+  # Skip rather than overwrite if `skip_all` argument passed
+  [ "$1" = "skip_all" ] && skip_all=true && overwrite_all=false
+
   for source in $dotfiles
   do
     dest="$HOME/.$(basename "${source%.*}")"

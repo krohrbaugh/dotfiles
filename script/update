@@ -7,21 +7,20 @@ set -o pipefail
 if [ -z ${DOT_FILES+x} ]; then
   DOT_FILES="$(git rev-parse --show-toplevel)"
 fi
+if [ -z ${SCRIPT_ROOT+x} ]; then
+  SCRIPT_ROOT="$DOT_FILES/script"
+fi
+
+# shellcheck source=script/shared/prerequisites.sh
+source "$SCRIPT_ROOT/shared/prerequisites.sh"
+
+#
+# Update symlinked dotfiles
+#
+dotfiles "skip_all"
 
 #
 # Software
 #
 # shellcheck source=homebrew/update
 source "$DOT_FILES/homebrew/update"
-
-#
-# Ruby environment
-#
-# shellcheck source=ruby/update
-source "$DOT_FILES/ruby/update"
-
-#
-# Node environment
-#
-# shellcheck source=node/update
-source "$DOT_FILES/node/update"

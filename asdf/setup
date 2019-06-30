@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#
+# Setup asdf version manager plugins
+#
+# NOTE: asdf itself is installed by homebrew
+set -euo pipefail
+
+# shellcheck source=asdf/asdf.sh
+source "$DOT_FILES/asdf/asdf.sh"
+
+if type asdf &>/dev/null; then
+  asdf_setup
+else
+  warnn "Could not find asdf."
+fi

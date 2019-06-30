@@ -34,18 +34,6 @@ source "$DOT_FILES/terminal/nuke"
 source "$DOT_FILES/sublime3/nuke"
 
 #
-# Nuke Ruby environment
-#
-# shellcheck source=ruby/nuke
-source "$DOT_FILES/ruby/nuke"
-
-#
-# Nuke Node environment
-#
-# shellcheck source=node/nuke
-source "$DOT_FILES/node/nuke"
-
-#
 # Nuke prerequisites (reverses 'bootstrap')
 #
 if [ "$nuke_complete" = "true" ]; then

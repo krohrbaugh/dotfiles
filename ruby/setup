@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-#
-# Setup ruby environment
-set -euo pipefail
-
-# shellcheck source=ruby/ruby.sh
-source "$DOT_FILES/ruby/ruby.sh"
-
-ruby_environment

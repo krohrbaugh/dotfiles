@@ -1,0 +1,4 @@
+#
+# Configues ASDF
+#
+legacy_version_file = yes

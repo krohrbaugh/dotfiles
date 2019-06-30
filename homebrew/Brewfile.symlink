@@ -16,16 +16,26 @@ cask "google-chrome" unless system "test '[ -d /Applications/Google\ Chrome.app/
 cask "firefox"
 cask "opera"
 
-# CLI
+# CLI / Utils
 brew "ack"
+brew "autoconf"
+brew "automake"
 brew "awscli"
 brew "bfg"
 brew "cloc"
 brew "coreutils"
+brew "curl"
 brew "grc"
+brew "libtool"
+brew "libxslt"
+brew "libyaml"
+brew "openssl"
+brew "readline"
 brew "shellcheck"
 brew "the_silver_searcher"
 brew "tree"
+brew "unixodbc"
+brew "unzip"
 brew "xmlstarlet"
 brew "zsh"
 
@@ -36,6 +46,7 @@ cask "teamviewer"
 mas "Slack", id: 803453959
 
 # Development
+brew "asdf"
 cask "tower"
 cask "visual-studio-code"
 
@@ -44,20 +55,10 @@ brew "elixir"
 
 ## Node
 brew "node"
-brew "nvm"
 
 ## Java
-brew "jenv"
 cask "java"
 cask "java8"
-
-## Ruby
-brew "chruby"
-brew "ruby-install"
-
-## Python
-brew "pyenv"
-brew "pipenv"
 
 # Editors
 cask "sublime-text"
