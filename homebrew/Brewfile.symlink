@@ -43,6 +43,7 @@ brew "zsh"
 mas "Annotate", id: 918207447
 cask "dropbox"
 cask "teamviewer"
+cask "torguard"
 mas "Slack", id: 803453959
 
 # Development
@@ -76,6 +77,7 @@ cask "alfred"
 cask "appcleaner"
 cask "istat-menus"
 cask "karabiner-elements"
+cask "notion"
 cask "spectacle"
 cask "transmit"
 mas "1Password", id: 1333542190
