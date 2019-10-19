@@ -4,8 +4,7 @@
 
 cask_args appdir: "/Applications"
 
-tap "caskroom/cask"
-tap "caskroom/versions"
+tap "homebrew/cask-versions"
 
 # Pre-req's
 brew "mas" # Mac App Store CLI - https://github.com/mas-cli/mas
@@ -13,7 +12,7 @@ brew "mas" # Mac App Store CLI - https://github.com/mas-cli/mas
 # Browsers
 cask "brave-browser"
 cask "google-chrome" unless system "test '[ -d /Applications/Google\ Chrome.app/ ]'"
-cask "firefox"
+cask "firefox" unless system "test '[ -d /Applications/Firefox.app/ ]'"
 cask "opera"
 
 # CLI / Utils
