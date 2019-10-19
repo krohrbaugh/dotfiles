@@ -80,5 +80,6 @@ cask "karabiner-elements"
 cask "notion"
 cask "spectacle"
 cask "transmit"
+cask "vanilla"
 mas "1Password", id: 1333542190
 mas "Day One", id: 1055511498
