@@ -16,15 +16,15 @@ git_status () {
   # TODO: Resume here: need to determine whether to show dirty/unpushed based on config
   # and short-circuit before the call to git status
   if [ $(git rev-parse --is-inside-work-tree 2>/dev/null) ]; then
-    echo " on $(git_dirty)$(git_branch)%{$reset_color%}$(need_push)"
+    echo " on $(git_dirty_color)$(git_branch)%{$reset_color%}$(need_push)"
   fi
 }
 
-git_branch() {
-  echo $(git rev-parse --abbrev-ref HEAD)
+git_branch () {
+  git rev-parse --abbrev-ref HEAD
 }
 
-git_dirty () {
+git_dirty_color () {
   git_status=$(git status --porcelain)
   if [ -z "$git_status" ]; then
     # Clean
@@ -56,7 +56,7 @@ git_dirty () {
 # }
 
 unpushed () {
-  $(git cherry -v @{upstream} 2>/dev/null)
+  git cherry -v @{upstream} 2>/dev/null
 }
 
 need_push () {
