@@ -10,7 +10,7 @@ tap "homebrew/cask-versions"
 brew "mas" # Mac App Store CLI - https://github.com/mas-cli/mas
 
 # Browsers
-cask "brave-browser"
+cask "brave-browser" unless system "test '[ -d /Applications/Brave\ Browser.app/ ]'"
 cask "google-chrome" unless system "test '[ -d /Applications/Google\ Chrome.app/ ]'"
 cask "firefox" unless system "test '[ -d /Applications/Firefox.app/ ]'"
 cask "opera"
