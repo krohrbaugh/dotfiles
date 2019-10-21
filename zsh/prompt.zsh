@@ -84,7 +84,7 @@ prompt () (
 
   printf "%s\n%s" \
     "$(user_info)$(path_info)$(git_info)" \
-    "${FG[063]}› ${FX[reset]}"
+    "${FX[bold]}${FG[135]}› ${FX[reset]}"
 )
 
 PROMPT=$'$(prompt)'
