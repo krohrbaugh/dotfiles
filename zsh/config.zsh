@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+#
 # Stolen from: https://github.com/holman/dotfiles/
 
 if [[ -n $SSH_CONNECTION ]]; then
@@ -41,10 +43,4 @@ setopt complete_aliases
 
 zle -N newtab
 
-bindkey '^[^[[D' backward-word
-bindkey '^[^[[C' forward-word
-bindkey '^[[5D' beginning-of-line
-bindkey '^[[5C' end-of-line
-bindkey '^[[3~' delete-char
-bindkey '^[^N' newtab
-bindkey '^?' backward-delete-char
+bindkey -v
