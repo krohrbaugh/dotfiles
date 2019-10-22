@@ -15,9 +15,9 @@ asdf_setup () {
   # Install plugins
   local plugins
   plugins=$(asdf_plugins)
-  for plugin in ${plugins[@]}
+  for plugin in "${plugins[@]}"
   do
-    asdf plugin-add $plugin &2>/dev/null
+    asdf plugin-add "$plugin" 2>/dev/null
   done
 }
 
@@ -30,8 +30,8 @@ asdf_nuke () {
   # Remove plugins
   local plugins
   plugins=$(asdf_plugins)
-  for plugin in ${plugins[@]}
+  for plugin in "${plugins[@]}"
   do
-    asdf plugin-remove $plugin &2>/dev/null
+    asdf plugin-remove "$plugin" 2>/dev/null
   done
 }
