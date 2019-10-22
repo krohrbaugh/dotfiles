@@ -2,5 +2,6 @@
 #   Sublime: 'subl -nw'
 #   MacVim:  'mvim'
 #   Vim:     'vim'
-export EDITOR="subl -nw"
-export GEM_EDITOR="subl -nw"
+#   VS Code: 'code --wait'
+export EDITOR="code --wait"
+export GEM_EDITOR="code --wait"
