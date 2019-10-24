@@ -27,7 +27,7 @@ export HOMEBREW_BUNDLE_TAP_SKIP
 
 homebrew_bundle () {
   brew update
-  info 'Checking Brewfile . . . '
+  infon 'Checking Brewfile'
   brew bundle check --global || brew bundle --global
 }
 

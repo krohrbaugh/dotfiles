@@ -24,8 +24,10 @@ prompt () (
       config_type="$1"
       config_default="$2"
       config_setting="$3"
-      git config --get --default "$config_default" --type "$config_type" \
-        "$config_setting"
+      git config --get "--$config_type" "$config_setting" || echo "$config_default"
+      # Once all machines are using modern git versions, this is a bit clearer:
+      # git config --get --default "$config_default" --type "$config_type" \
+        # "$config_setting"
     }
 
     cmd_status () {

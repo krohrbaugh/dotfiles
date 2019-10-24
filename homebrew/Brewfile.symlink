@@ -25,6 +25,7 @@ brew "cloc"
 brew "coreutils"
 brew "curl"
 brew "grc"
+brew "libffi"
 brew "libtool"
 brew "libxslt"
 brew "libyaml"
@@ -39,16 +40,18 @@ brew "xmlstarlet"
 brew "zsh"
 
 # Communication
-mas "Annotate", id: 918207447
 cask "dropbox"
 cask "teamviewer"
-cask "torguard"
+mas "Annotate", id: 918207447
 mas "Slack", id: 803453959
+
+# Productivity
+cask "gimp"
+mas "Microsoft OneNote", id: 784801555
 
 # Development
 brew "asdf"
 cask "tower"
-cask "visual-studio-code"
 
 ## Elixir
 brew "elixir"
@@ -63,6 +66,7 @@ cask "java8"
 # Editors
 cask "sublime-text"
 cask "textmate"
+cask "visual-studio-code"
 
 # Entertainment
 cask "spotify"
@@ -78,6 +82,7 @@ cask "istat-menus"
 cask "karabiner-elements"
 cask "notion"
 cask "spectacle"
+cask "torguard"
 cask "transmit"
 cask "vanilla"
 mas "1Password", id: 1333542190

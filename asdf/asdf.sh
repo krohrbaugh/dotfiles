@@ -14,7 +14,7 @@ asdf_plugins () {
 asdf_setup () {
   # Install plugins
   local plugins
-  plugins=$(asdf_plugins)
+  plugins="$(asdf_plugins)"
   for plugin in "${plugins[@]}"
   do
     asdf plugin-add "$plugin" 2>/dev/null
