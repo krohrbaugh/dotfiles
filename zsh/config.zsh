@@ -44,3 +44,4 @@ setopt complete_aliases
 zle -N newtab
 
 bindkey -v
+bindkey "^R" history-incremental-search-backward
