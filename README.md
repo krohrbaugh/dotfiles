@@ -58,7 +58,7 @@ Some repositories can be too large for the `git` info displayed in the zsh promp
 To disable it for a specific repo, run the following inside it:
 
 ```bash
-git config --bool shell.showdirty false
+git config --local --bool shell.showdirty false
 ```
 
 (It's also possible to disable the upstream status by setting the
