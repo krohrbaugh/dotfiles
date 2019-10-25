@@ -11,6 +11,7 @@ sublime3/**/*.cache
 sublime3/**/*.merged-ca-bundle
 sublime3/**/*.system-ca-bundle
 sublime3/**/*.user-ca-bundle
+gitconfig.symlink
 vscode/User/globalStorage
 
 # Hidden files in sub-directories
