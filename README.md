@@ -51,6 +51,19 @@ To set your Mac's machine name:
 hostname=my_hostname ./macos/set-machine-name.sh
 ```
 
+### Shell customization
+
+Some repositories can be too large for the `git` info displayed in the zsh prompt.
+
+To disable it for a specific repo, run the following inside it:
+
+```bash
+git config --bool shell.showdirty false
+```
+
+(It's also possible to disable the upstream status by setting the
+`shell.showpush` flag.)
+
 ### Sublime Text 3
 
 See the README file in the `sublime3` directory for details.
