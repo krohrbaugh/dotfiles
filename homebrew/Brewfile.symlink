@@ -4,6 +4,7 @@
 
 cask_args appdir: "/Applications"
 
+tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
 # Pre-req's
@@ -55,6 +56,11 @@ cask "tower"
 
 ## Elixir
 brew "elixir"
+
+## Fonts
+cask "font-anonymice-powerline"
+cask "font-inconsolata-g-for-powerline"
+cask "font-powerline-symbols"
 
 ## Node
 brew "node"
