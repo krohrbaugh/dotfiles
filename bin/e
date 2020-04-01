@@ -15,7 +15,7 @@
 #   # => opens the specified directory in your editor
 
 if [ "$1" == "" ] ; then
-  exec subl .
+  exec code .
 else
-  exec subl "$1"
+  exec code "$1"
 fi
