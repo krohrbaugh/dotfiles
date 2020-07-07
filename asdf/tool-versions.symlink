@@ -1,3 +1,4 @@
 # ASDF global settings
 python system
 ruby system
+scala 2.13.1
