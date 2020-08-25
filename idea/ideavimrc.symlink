@@ -1,0 +1,3 @@
+# Disable the audio bell in favor of a less annoying visual one
+set visualbell
+set noerrorbells
