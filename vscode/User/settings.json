@@ -9,10 +9,19 @@
   "java.configuration.checkProjectSettingsExclusions": false,
 "java.semanticHighlighting.enabled": true,
 "python.languageServer": "Microsoft",
-"files.eol": "\n",
 "editor.cursorStyle": "line",
 "editor.insertSpaces": false,
 "editor.lineNumbers": "on",
 "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-"editor.wordWrap": "off"
+"editor.wordWrap": "off",
+"files.eol": "\n",
+"files.watcherExclude": {
+  "**/.bloop": true,
+  "**/.metals": true,
+  "**/.ammonite": true
+},
+"security.workspace.trust.untrustedFiles": "open",
+"workbench.editorAssociations": {
+  "*.ipynb": "jupyter.notebook.ipynb"
+},
 }
