@@ -8,7 +8,7 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "java.configuration.checkProjectSettingsExclusions": false,
 "java.semanticHighlighting.enabled": true,
-"python.languageServer": "Microsoft",
+"python.languageServer": "Default",
 "editor.cursorStyle": "line",
 "editor.insertSpaces": false,
 "editor.lineNumbers": "on",
