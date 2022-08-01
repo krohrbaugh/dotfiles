@@ -1,8 +1,7 @@
 {
   "editor.fontFamily": "Inconsolata-g, Menlo, Monaco, 'Courier New'",
   "editor.fontSize": 14,
-  "editor.tabSize": 8,
-  "window.zoomLevel": 1,
+  "editor.tabSize": 2,
   "python.jediEnabled": false,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -10,7 +9,6 @@
 "java.semanticHighlighting.enabled": true,
 "python.languageServer": "Default",
 "editor.cursorStyle": "line",
-"editor.insertSpaces": false,
 "editor.lineNumbers": "on",
 "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
 "editor.wordWrap": "off",
@@ -24,4 +22,6 @@
 "workbench.editorAssociations": {
   "*.ipynb": "jupyter.notebook.ipynb"
 },
+"git.enabled": false,
+"window.zoomLevel": 1,
 }
