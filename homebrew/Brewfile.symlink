@@ -92,7 +92,6 @@ cask "vlc"
 cask "iterm2"
 
 # Utility
-cask "alfred"
 cask "appcleaner"
 cask "istat-menus"
 cask "keka"
@@ -103,4 +102,5 @@ cask "torguard"
 cask "transmit"
 cask "vanilla"
 mas "1Password", id: 1333542190
+mas "Balance Lock", id: 1019371109
 mas "Day One", id: 1055511498
