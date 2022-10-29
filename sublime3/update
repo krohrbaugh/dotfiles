@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-#
-# Update Sublime Text 3 settings
-set -eu
-set -o pipefail
-
-echo "Nothing to update. Run Sublime Text to update: subl"

@@ -5,7 +5,7 @@ various examples and repositories that I've found across the web.
 
 ## Environment
 
-I am running on macOS High Sierra, using zsh as my shell.
+I am running on macOS Ventura, using zsh as my shell.
 
 ## Installation
 
@@ -64,13 +64,23 @@ git config --local --bool shell.showdirty false
 (It's also possible to disable the upstream status by setting the
 `shell.showpush` flag.)
 
-### Sublime Text 3
-
-See the README file in the `sublime3` directory for details.
-
 ### VSCode
 
 See the README file in the `vscode` directory for details.
+
+### XCode problems
+
+XCode command-line tools sometime get confused. Try these:
+
+```bash
+xcode-select --install
+
+xcodebuild -license accept
+
+xcodebuild -runFirstLaunch
+```
+
+NOTE: Some of these may require `sudo`; use it if you need to.
 
 ## Credits
 

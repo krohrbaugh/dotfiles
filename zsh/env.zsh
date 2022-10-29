@@ -1,5 +1,4 @@
 # Editor settings
-#   Sublime: 'subl -nw'
 #   MacVim:  'mvim'
 #   Vim:     'vim'
 #   VS Code: 'code --wait'

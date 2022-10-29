@@ -1,4 +1,4 @@
-# macOS 10.13.x
+# macOS 10.13.x - 12.7
 alias flushdns="sudo killall -HUP mDNSResponder && echo macOS DNS Cache Reset"
 
 # OS X 10.10.4

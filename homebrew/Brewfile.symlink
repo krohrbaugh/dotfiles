@@ -11,10 +11,10 @@ tap "homebrew/cask-versions"
 brew "mas" # Mac App Store CLI - https://github.com/mas-cli/mas
 
 # Browsers
-cask "brave-browser" unless system "test '[ -d /Applications/Brave\ Browser.app/ ]'"
+cask "arc" unless system "test '[ -d /Applications/Arc.app/ ]'"
 cask "google-chrome" unless system "test '[ -d /Applications/Google\ Chrome.app/ ]'"
 cask "firefox" unless system "test '[ -d /Applications/Firefox.app/ ]'"
-cask "opera"
+cask "opera" unless system "test '[ -d /Applications/Opera.app/ ]'"
 
 # CLI / Utils
 brew "ack"
@@ -50,57 +50,52 @@ brew "xmlstarlet"
 brew "zsh"
 
 # Communication
-cask "dropbox"
-cask "teamviewer"
+cask "discord"
+cask "slack"
 mas "Annotate", id: 918207447
-mas "Slack", id: 803453959
 
 # Productivity
-cask "background-music"
 cask "gimp"
-mas "Microsoft OneNote", id: 784801555
-
-# Development
-brew "asdf"
-cask "tower"
-
-## Elixir
-brew "elixir"
+cask "microsoft-remote-desktop"
+cask "notion"
+cask "raycast"
+cask "rectangle"
+cask "transmit"
 
 ## Fonts
 cask "font-anonymice-powerline"
+cask "font-inconsolata"
+cask "font-inconsolata-g"
 cask "font-inconsolata-g-for-powerline"
 cask "font-powerline-symbols"
+cask "font-source-sans-pro"
 
 ## Node
 brew "node"
 
 ## Java
-cask "java"
-cask "java8"
+brew "java"
 
 # Editors
-cask "sublime-text"
+brew "vim"
+cask "intellij-idea"
 cask "textmate"
 cask "visual-studio-code"
 
 # Entertainment
-cask "spotify"
+cask "moonlight"
 cask "vlc"
 
 # Terminals
 cask "iterm2"
+cask "warp"
 
 # Utility
+brew "asdf"
 cask "appcleaner"
 cask "istat-menus"
 cask "keka"
-cask "karabiner-elements"
-cask "notion"
-cask "spectacle"
 cask "torguard"
-cask "transmit"
 cask "vanilla"
 mas "1Password", id: 1333542190
 mas "Balance Lock", id: 1019371109
-mas "Day One", id: 1055511498
