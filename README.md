@@ -15,7 +15,7 @@ For a completely fresh installation, start by generating a `strap.sh` script. It
 will checkout the dotfiles, and invoke the appropriate scripts to set things up
 and install various software.
 
-To do that, visit [strap.githubapp.com][strap].
+To do that, visit [strap.mikemcquaid.com][strap].
 
 ### Existing install / updating
 
@@ -95,4 +95,4 @@ people's setups:
 [mathiasbynens]: https://github.com/mathiasbynens/dotfiles
 [ryanb]: https://github.com/ryanb/dotfiles/
 [scripts]: https://github.com/github/scripts-to-rule-them-all
-[strap]: https://strap.githubapp.com/
+[strap]: https://strap.mikemcquaid.com

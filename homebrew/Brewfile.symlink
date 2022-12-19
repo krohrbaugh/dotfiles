@@ -11,10 +11,10 @@ tap "homebrew/cask-versions"
 brew "mas" # Mac App Store CLI - https://github.com/mas-cli/mas
 
 # Browsers
-cask "arc" unless system "test '[ -d /Applications/Arc.app/ ]'"
-cask "google-chrome" unless system "test '[ -d /Applications/Google\ Chrome.app/ ]'"
-cask "firefox" unless system "test '[ -d /Applications/Firefox.app/ ]'"
-cask "opera" unless system "test '[ -d /Applications/Opera.app/ ]'"
+cask "arc" # unless system "test '[ -d /Applications/Arc.app/ ]'"
+cask "google-chrome" # unless system "test '[ -d /Applications/Google\ Chrome.app/ ]'"
+cask "firefox" # unless system "test '[ -d /Applications/Firefox.app/ ]'"
+cask "opera" # unless system "test '[ -d /Applications/Opera.app/ ]'"
 
 # CLI / Utils
 brew "ack"
@@ -40,6 +40,7 @@ brew "procs"
 brew "readline"
 brew "ripgrep"
 brew "shellcheck"
+brew "svn"
 brew "the_silver_searcher"
 brew "tokei"
 brew "tree"
@@ -92,10 +93,10 @@ cask "warp"
 
 # Utility
 brew "asdf"
+cask "1password"
 cask "appcleaner"
+cask "balance-lock"
 cask "istat-menus"
 cask "keka"
 cask "torguard"
 cask "vanilla"
-mas "1Password", id: 1333542190
-mas "Balance Lock", id: 1019371109

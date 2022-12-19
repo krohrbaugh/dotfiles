@@ -12,7 +12,10 @@ sublime3/**/*.merged-ca-bundle
 sublime3/**/*.system-ca-bundle
 sublime3/**/*.user-ca-bundle
 gitconfig.symlink
+vscode/User/History
 vscode/User/globalStorage
+vscode/User/workspaceStorage
+
 
 # Hidden files in sub-directories
 **/.*

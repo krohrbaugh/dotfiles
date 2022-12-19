@@ -7,7 +7,7 @@
 echo ''
 if [ -n "$hostname" ]
 then
-  osascript -e 'tell application "System Preferences" to quit'
+  osascript -e 'tell application "System Settings" to quit'
 
   echo "Setting hostname to $hostname. Super-user password required:"
 
@@ -23,7 +23,7 @@ then
   echo "Hostname set to $hostname!"
 else
   echo "No hostname specified!"
-  echo "Usage: hostname=desired_hostname ./osx/set-machine-name.sh"
+  echo "Usage: hostname=desired_hostname ./macos/set-machine-name.sh"
 fi
 
 

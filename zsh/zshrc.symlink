@@ -18,8 +18,8 @@ fi
 typeset -U config_files
 config_files=($DOT_FILES/**/*.zsh)
 
-# Load everything, excluding path and completion files
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
+# Load everything, excluding path, completion, and VSCode history files
+for file in ${${${config_files:#*/path.zsh}:#*/completion.zsh}:#*/vscode/User/**/*.zsh}
 do
   source $file
 done
