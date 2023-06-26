@@ -1,9 +1,7 @@
 DavidAnson.vscode-markdownlint
 formulahendry.auto-close-tag
-mjmcloug.vscode-elixir
+golang.go
 ms-python.python
-ms-vscode.Go
-ms-vscode.sublime-keybindings
-rebornix.ruby
+ms-python.vscode-pylance
 vscodevim.vim
-Zignd.html-css-class-completion
+wingrunr21.vscode-ruby
