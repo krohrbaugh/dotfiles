@@ -12,3 +12,9 @@ if [ -n ${HOMEBREW_PREFIX+x} ]; then
   unset asdf_loader
 fi
 
+#
+# Plugin settings
+#
+
+# Golang
+export ASDF_GOLANG_MOD_VERSION_ENABLED=true
