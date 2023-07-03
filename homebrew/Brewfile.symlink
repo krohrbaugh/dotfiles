@@ -86,6 +86,7 @@ cask "visual-studio-code"
 
 # Entertainment
 cask "moonlight"
+cask "plexamp"
 cask "vlc"
 
 # Terminals
