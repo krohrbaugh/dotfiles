@@ -1,10 +1,12 @@
 # Python Workflow
+
 The Python workflow is supported by a few different tools:
 
- + asdf - For actually installing and managing Python versions
- + direnv - For auto-loading Python virtual environments (venv's)
++ asdf - For actually installing and managing Python versions
++ direnv - For auto-loading Python virtual environments (venv's)
 
 ## Installing Python
+
 Assuming the `Brewfile` has been bootstrapped and installed, use asdf to install
 the Python plugin:
 
@@ -25,6 +27,7 @@ asdf list python
 ```
 
 ## Working in a Python project
+
 From the top directory of a Python project, set the desired Python version:
 
 ```sh
