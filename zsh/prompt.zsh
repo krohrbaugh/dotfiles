@@ -84,8 +84,15 @@ prompt () (
     echo " in ${FG[012]}%1/${FX[reset]}"
   }
 
+  python_venv () {
+    if [ -n "${VIRTUAL_ENV_PROMPT}" ]; then
+      trimmed_venv=$(echo "${VIRTUAL_ENV_PROMPT}" | tr -d '() ')
+      echo " %F{#ffde57}(%F{#4584b6}${trimmed_venv}%F{#ffde57})${FX[reset]}"
+    fi
+  }
+
   printf "%s\n%s" \
-    "$(user_info)$(path_info)$(git_info)" \
+    "$(user_info)$(path_info)$(git_info)$(python_venv)" \
     "${FX[bold]}${FG[135]}› ${FX[reset]}"
 )
 
