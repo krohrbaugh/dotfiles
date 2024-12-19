@@ -108,3 +108,4 @@ cask "packetsender"
 cask "syncthing"
 cask "torguard"
 cask "vanilla"
+mas "Wireguard", id: 1451685025
