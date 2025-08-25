@@ -108,4 +108,5 @@ cask "packetsender"
 cask "syncthing"
 cask "torguard"
 cask "vanilla"
+brew "wakeonlan"
 mas "Wireguard", id: 1451685025
