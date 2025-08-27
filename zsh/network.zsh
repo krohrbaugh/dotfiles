@@ -1,5 +1,5 @@
 # macOS Sequoia
-alias flushdns="sudo dscacheutil -flushcache; [5, 7]sudo killall -HUP mDNSResponder"
+alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder && echo macOS DNS cache flushed"
 
 # macOS 10.13.x - 12.7
 # alias flushdns="sudo killall -HUP mDNSResponder && echo macOS DNS Cache Reset"
