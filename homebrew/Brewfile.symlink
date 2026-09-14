@@ -55,6 +55,9 @@ cask "discord"
 cask "slack"
 mas "Annotate", id: 918207447
 
+# Gen AI
+cask "unsloth"
+
 # Productivity
 cask "gimp"
 cask "microsoft-remote-desktop"
