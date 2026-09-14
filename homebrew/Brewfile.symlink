@@ -4,9 +4,6 @@
 
 cask_args appdir: "/Applications"
 
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-
 # Pre-req's
 brew "mas" # Mac App Store CLI - https://github.com/mas-cli/mas
 
@@ -100,12 +97,12 @@ brew "asdf"
 cask "1password"
 cask "appcleaner"
 cask "cyberduck"
-cask "docker"
+cask "docker-desktop"
 cask "balance-lock"
 cask "istat-menus"
 cask "keka"
 cask "packetsender"
-cask "syncthing"
+cask "syncthing-app"
 cask "torguard"
 cask "vanilla"
 brew "wakeonlan"
