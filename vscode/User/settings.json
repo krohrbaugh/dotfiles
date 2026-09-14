@@ -30,4 +30,7 @@
     "<C-x>": false,
     "<C-v>": false,
   },
+  "security.allowedUNCHosts": [
+    "beaker"
+  ],
 }
